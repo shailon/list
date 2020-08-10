@@ -1,36 +1,7 @@
+
 <html>
-	
-	<configuration>
 
-<system.webServer>
 
-<rewrite>
-
-    <rules>
-
-       <rule name="HTTP to HTTPS redirect" stopProcessing="true">
-
-         <match url="(.*)" />
-
-         <conditions>
-
-           <add input="{HTTPS}" pattern="off" ignoreCase="true" />
-
-         </conditions>
-
-         <action type="Redirect" redirectType="Permanent" url="https://moncryd.com/{R:1}" />
-
-       </rule>
-
-    </rules>
-
-</rewrite>
-
-</system.webServer>
-
-</configuration>
-	
-	
 <cross-domain-policy>
   <allow-access-from domain="*" />
 </cross-domain-policy>
@@ -62,7 +33,7 @@
     <tr>
       <th scope="col"><?xml version="1.0"?>
         
-        <a href="#openModal1"></a>
+        <a href="#openModal1">.</a>
 
 <div id="openModal1" class="modalDialog1">
     <div> <a href="#close" title="Close" class="close">X</a>
@@ -128,57 +99,43 @@
 
         
         <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-<head>
-<title>Add to Playlist</title>
- <script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/9b0ed3b4fd7a2eb3049b51cd26b48b9c0300e7b9.bin?disposition=attachment&filename=jwplayer6.10.js"></script>
-    <script type="text/javascript">
-        jwplayer.key = "X6kb26SYDzrSJSh04snwDPZET80gS3L0s90VHOGPp1jwy+6iE+Cx/lGZH1c=";</script>
-</head>
-<body>
-<div id="container"></div>
-<script type="text/javascript">
-    jwplayer("container").setup({
-        height: 254,
-        width: 720,
-        file: "http://content.bitsontherun.com/videos/nPripu9l-60830.mp4",
-        image: "http://content.bitsontherun.com/thumbs/nPripu9l-320.jpg",
-        title: "Big Buck Bunny trailer",
-        listbar: {
-        position: "right",
-        size: 280,
-        },
-        primary: 'flash'
-    }); 
-    function addVideo(videoUrl, videoThumb, videoTitle) {
-        var playlist = jwplayer().getPlaylist();
-        var newItem = {
-            file: videoUrl,
-            image: videoThumb,
-            title: videoTitle
-        };
-        playlist.push(newItem);
-        jwplayer().load(playlist);
-    }
-</script>
-<p>Click on one of the links below to add an item to the player:</p>
-<ul>
-  
-        <p>
-          <input type="text" autocomplete="off" value="https://www.youtube.com/watch?v=uO59tfQ2TbA";" /></br>
-          <input type="button" name="load" value="Load Stream" class="small primary button" onclick="addVideo();"></br> 
-        </p>
+
+<div class="mapouter"><div class="gmap_canvas"><iframe width="700" height="400" id="gmap_canvas" src="https://her.is/3jK3K6J" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://her.is/3jK3K6J"></a></div><style>.mapouter{position:relative;text-align:right;height:400px;width:700px;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:700px;}</style></div>
+
+
+<img src="https://embed-ssl.wistia.com/deliveries/b07a3f5273b1fd199355702b1507d8d5.bin?disposition=attachment&filename=20200724_155543.jpg" alt="Trulli" width="190" height="150">
+
+<img src="https://embed-ssl.wistia.com/deliveries/b8b3f9e4e3adaa29e16b964ceb38729f.bin?disposition=attachment&filename=20200724_155647.jpg"alt="Trulli" width="190" height="150">
+
+<img src="https://embed-ssl.wistia.com/deliveries/f790c241532e240d99bcc04a506edb6f.bin?disposition=attachment&filename=20200724_155723.jpg"alt="Trulli" width="190" height="150">
+
+<!-- WYSIWYG starts here __-->
+			
+      <div class="column-grid column-grid-3"></div>
+      <div class="column column-span-1 column-push-0 column-first"></div>
+					<p class="big">
+          <strong>T</strong>: &nbsp;  (054) 528939
+          <br />
+          <strong>C</strong>:  &nbsp; 958308233
+          <br />
+					<strong>E</strong>:  &nbsp; <a href="#">betoaqp@gmail.com
+          </a>
+          </p>
+					
+					<p> Calle Manuel Aguirre 116 Umacollo<br />
+					Cercado - Arequipa<br />
+					Perú</p>
+				</div>
         
-<li><a href="http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v5/16026/loading-a-playlist-into-the-player#" onclick="addVideo('http://content.bitsontherun.com/videos/yj1shGJB-60830.mp4', 'http://content.bitsontherun.com/thumbs/yj1shGJB-320.jpg', 'Sintel trailer'); return false;">Add the Sintel trailer to the playlist</a></li>
-<li><a href="http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v5/16026/loading-a-playlist-into-the-player#" onclick="addVideo('http://content.bitsontherun.com/videos/i8oQD9zd-kNspJqnJ.mp4', 'http://content.bitsontherun.com/thumbs/i8oQD9zd-640.jpg', 'Tears of Steel'); return false;">Add the Tears of Steel trailer to the playlist</a></li>
-</ul>
-</body>
+
+
+<div class="column column-span-2 column-push-0 column-last"></div>
 
 
 
 
-
-
-        </center></th>
+</div>
+       </th>
       <th scope="col"><?xml version="1.0"?>
         
 
@@ -191,7 +148,7 @@
 
 
 
-        </center></th>
+        </th>
       <td><?xml version="1.0"?>
         
 
@@ -200,8 +157,11 @@
     </tr>
   </tbody>
 </table>
-
+</body>
 </th>
+
+
+
 
 <!--2-->
 
@@ -304,8 +264,9 @@
 
 
 
-
-        </center></th>
+</div>
+</div>
+        </th>
       <th scope="col"><?xml version="1.0"?>
         
 
@@ -318,7 +279,7 @@
 
 
 
-        </center></th>
+        </th>
       <td><?xml version="1.0"?>
         
 
@@ -327,9 +288,12 @@
     </tr>
   </tbody>
 </table>
-
+</body>
 
 </th>
+
+
+
 
 
  <!--3-->
@@ -345,7 +309,7 @@
         
         
         
-        <a href="#openModal3"></a>
+        <a href="#openModal3">.</a>
 
 <div id="openModal3" class="modalDialog3">
     <div> <a href="#close" title="Close" class="close">X</a>
@@ -412,8 +376,9 @@
 <!--add-->
 <img src="https://media.giphy.com/media/MFsqcBSoOKPbjtmvWz/giphy.gif" alt="Trulli" width="190" height="150">
 
-
-        </center></th>
+</div>
+</div>
+       </th>
       <th scope="col"><?xml version="1.0"?>
         
 
@@ -425,7 +390,7 @@
 
 
 
-        </center></th>
+        </th>
       <td><?xml version="1.0"?>
         
 
@@ -435,7 +400,7 @@
   </tbody>
 </table>
 
-
+</body>
 </th>
 
  <!--2-->
@@ -519,7 +484,7 @@
 
         <script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/9b0ed3b4fd7a2eb3049b51cd26b48b9c0300e7b9.bin?disposition=attachment&filename=jwplayer6.10.js"></script>
         <script type="text/javascript">jwplayer.key = "Q1Ft5yFT0nJBlCFnQAvJ7nC+uwr628IgJBzoCAnnn3tGVqUiRjtloYRetCh+EbI0";</script>
-        <center>
+      
           <div id="emergencycouplesatu1"></div>
           <script type="text/javascript">
     jwplayer("emergencycouplesatu1").setup({
@@ -561,8 +526,9 @@
         </script>
 	    
 
-
-        </center></th>
+</div>
+</div>
+        </th>
       <th scope="col"><?xml version="1.0"?>
         
 
@@ -575,7 +541,7 @@
 
 
 
-        </center></th>
+        </th>
       <td><?xml version="1.0"?>
         
 
@@ -585,7 +551,7 @@
   </tbody>
 </table>
 
-
+</body>
 </th>
 
 
@@ -670,9 +636,10 @@
         <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
 
 
+</div>
+</div>
 
-
-        </center></th>
+       </th>
       <th scope="col"><?xml version="1.0"?>
         
 
@@ -685,7 +652,7 @@
 
 
 
-        </center></th>
+        </th>
       <td><?xml version="1.0"?>
         
 
@@ -695,7 +662,7 @@
   </tbody>
 </table>
 
-
+</body>
 </th>
 
 <!--fila2 -->
@@ -777,9 +744,10 @@
 
 
 
+</div>
+</div>
 
-
-        </center></th>
+       </th>
       <th scope="col"><?xml version="1.0"?>
         
 
@@ -792,7 +760,7 @@
 
 
 
-        </center></th>
+        </th>
       <td><?xml version="1.0"?>
         
 
@@ -801,7 +769,7 @@
     </tr>
   </tbody>
 </table>
-
+</body>
 
 </th>
 
@@ -886,8 +854,9 @@
 
 
 
-
-        </center></th>
+</div>
+</div>
+      </th>
       <th scope="col"><?xml version="1.0"?>
         
 
@@ -899,7 +868,7 @@
 
 
 
-        </center></th>
+       </th>
       <td><?xml version="1.0"?>
         
 
@@ -908,7 +877,7 @@
     </tr>
   </tbody>
 </table>
-
+</body>
 
 </th>
 
@@ -986,8 +955,9 @@
         
         <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
 
-        
-        </center></th>
+</div>
+</div>
+       </th>
       <th scope="col"><?xml version="1.0"?>
         
 
@@ -1000,17 +970,17 @@
 
 
         
-        </center></th>
+        </th>
       <td><?xml version="1.0"?>
         
 
 
 </td>
     </tr>
-  </tbody>
+    </tbody>
 </table>
 
-
+</body>
         </td>
     </tr>
   </tbody>
@@ -1038,4 +1008,5 @@ jwplayer(emergencycouplesatu3).pause();"
 value="pause" /> 
 
 -->
+</body>
 </html>
