@@ -1,0 +1,278 @@
+<html>
+
+
+<div class="search-container">
+  <div class="search">
+    <input id="queryInput" class="search-bar"  type="text">
+    <button id="searchButton" class="search-button">
+      GO
+    </button>
+  </div>
+</div>
+
+
+
+
+<div class="main-container">
+  <script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/47ecb65faa3c670042b5e4b4b1c79054.bin?disposition=attachment&filename=jquery-2.2.4.min.js"></script>
+  
+<script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/165526b96e9be17d142803ea52e7bf49.bin?disposition=attachment&filename=client.js?onload=onClientLoad"></script>
+
+
+
+
+<div id="youtube-channel"></div>
+<script type="text/javascript">
+//2016 mizTech NTU ESOE mikeZheng 
+var musicCards = [];
+
+$(document).ready(function() {
+    //替按鈕綁上事件
+    $("#searchButton").on("click", function() {
+        var query = $("#queryInput").val();
+        //簡單防呆一下
+        if (query != "") {
+            loadYoutubeService($("#queryInput").val());
+            console.log(query + " 搜尋中..");
+        }
+    });
+});
+
+//向google 使用youtube服務
+function loadYoutubeService(query) {
+    gapi.client.load('youtube', 'v3', function() {
+        gapi.client.setApiKey('AIzaSyCRwMuGP50aOvrptyXRZtveE50faOLb8R0');
+        search(query);
+    });   
+}
+//搜尋
+function search(query) {
+    //對於搜尋上的其他功能可以參考googleapi
+    //https://developers.google.com/youtube/v3/docs/search/list#maxResults
+    var request = gapi.client.youtube.search.list({
+        part: 'snippet',
+        q: query,
+        maxResults: 2
+    });
+
+    request.execute(function(response) {
+        //將結果把所需部分進行擷取
+        $.each(response.items, function(i, item) {
+            if (!item['id']['playlistId']) {
+                var musicCard = {};
+                musicCard._id = item['id']['videoId'];
+               musicCard.src= "https://www.youtube.com/watch?v=" + musicCard._id;
+               musicCard.video= "https://www.youtube.com/watch?v=" + musicCard._id;
+                musicCard.file= "https://www.youtube.com/watch?v=" + musicCard._id;
+                musicCard.title = item['snippet']['title'];
+                musicCard.url = "https://www.youtube.com/embed/" + musicCard._id;
+                musicCard.description = item['snippet']['description'];
+                musicCards.push(musicCard);
+            }
+        });
+        // console.log(musicCards);
+        //將VIEW抽出來另外生成
+        renderView();
+    });
+}
+
+
+
+function renderView() {
+    var htmlString = "";
+    musicCards.forEach(function(musicCard, i) {
+        var card = createCard(musicCard._id, musicCard.title, musicCard.description, musicCard.url);
+
+        htmlString += card;
+    });
+
+    $('#youtube-channel').html(htmlString);
+
+}
+
+
+function createCard(_id, title, description, url,file,src) {
+    var card =
+        '<div class="card">' +
+        
+        '<div  class="demo_sidebar"  >' +
+        '<h1JW Player Stream Tester>'+
+        
+      
+        '<p>'+
+        
+         '<input type="button" name="load" value="play" class="small primary button" onclick="loadHls();">' +
+         '<input type="text" id="theFile" autocomplete="off" value="https://www.youtube.com/watch?v=' + _id + '">' +
+         
+        
+        '</p>' +
+         '<div class="info">' +
+        '<img src="http://img.youtube.com/vi/' + _id + '/0.jpg" alt="' + description + '">' +
+        '</div>' +
+        '<div class="content">' +
+        '<a><h2>' + title + '</h2></a>' +
+        '</div>' +
+        '</div>' +
+        
+        
+        
+        
+       
+        
+        
+        '</div>';
+    return card;
+}
+</script>
+</div>
+
+
+ <div>
+  
+
+  <script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/9b0ed3b4fd7a2eb3049b51cd26b48b9c0300e7b9.bin?disposition=attachment&filename=jwplayer6.10.js"></script>
+    <script type="text/javascript">jwplayer.key ="X6kb26SYDzrSJSh04snwDPZET80gS3L0s90VHOGPp1jwy+6iE+Cx/lGZH1c=";</script>
+
+
+  <script type='text/javascript'>
+    
+    
+    
+    
+    function loadHls(){
+  document.getElementById('submitBtn').style.display = 'inline-block';
+  
+  if (document.getElementById('hls').checked) {
+   var thePlayer = jwplayer('my-video').setup({
+   file: ''+document.getElementById('theFile').value+'',
+   width: '480',
+   height: '270',
+   androidhls:'true',
+   primary: 'flash',
+   androidhls:"true",
+   autostart: 'true',
+   type: 'hls',
+   });
+   var thePlayer2 = '{file: "'+document.getElementById('theFile').value+'",width: "580",height: "370",primary: "flash",androidhls: true,type: "hls"}'
+   document.getElementById("setupOptions").value = thePlayer2;
+   document.getElementById('theCode').innerHTML = 'ENTER PLAYER JS LIBRARY HERE 1<br />&lt;script&gt;jwplayer.key=&quot;2U/m9jOYEC49U1j3cNoou7IjxvGS5j03XTpetE5wCVBAwRqhG9pSYWQIMW0=&quot;&lt;/script&gt;<br /><br />&lt;div id=&quot;my-video&quot;&gt;&lt;/div&gt;<br />&lt;script type=&quot;text/javascript&quot;&gt;<br />jwplayer("my-video").setup({<br /> file: "'+document.getElementById('theFile').value+'",<br /> width: "580",<br /> height: "370",<br /> primary: "flash",<br /> androidhls: true,<br /> type: "hls"<br />});<br />&lt;/script&gt;'
+        } 
+        
+        
+  else if (document.getElementById('dash').checked){
+            var thePlayer = jwplayer('my-video').setup({
+            file: ''+document.getElementById('theFile').value+'',
+   width: '480',
+   height: '270',
+   dash:"true",
+   primary: 'html5',
+   autostart: 'true',
+   });
+   var thePlayer2 = '{file: "'+document.getElementById('theFile').value+'",width: "580",height: "370",primary: "html5",dash:true}'
+   document.getElementById("setupOptions").value = thePlayer2;
+   document.getElementById('theCode').innerHTML = 'ENTER PLAYER JS LIBRARY HERE 2<br />&lt;script&gt;jwplayer.key=&quot;2U/m9jOYEC49U1j3cNoou7IjxvGS5j03XTpetE5wCVBAwRqhG9pSYWQIMW0=&quot;&lt;/script&gt;<br /><br />&lt;div id=&quot;my-video&quot;&gt;&lt;/div&gt;<br />&lt;script type=&quot;text/javascript&quot;&gt;<br />jwplayer("my-video").setup({<br /> file: "'+document.getElementById('theFile').value+'",<br /> width: "580",<br /> height: "370",<br /> primary: "html5",<br /> dash: true<br />});<br />&lt;/script&gt;'
+  } 
+  
+  else {
+   var thePlayer = jwplayer('my-video').setup
+   
+   ({
+   file: ''+document.getElementById('theFile').value+'',
+   width: '480',
+   height: '270',
+   primary: 'flash',
+   androidhls: "true",
+   autostart: 'true'
+   });
+   
+   var thePlayer2 = '{file: "'+document.getElementById('theFile').value+'",width: "580",height: "370",primary: "flash",androidhls:true}'
+   document.getElementById("setupOptions").value = thePlayer2;
+   document.getElementById('theCode').innerHTML = 'ENTER PLAYER JS LIBRARY HERE 3<br />&lt;script&gt;jwplayer.key=&quot;2U/m9jOYEC49U1j3cNoou7IjxvGS5j03XTpetE5wCVBAwRqhG9pSYWQIMW0=&quot;&lt;/script&gt;<br /><br />&lt;div id=&quot;my-video&quot;&gt;&lt;/div&gt;<br />&lt;script type=&quot;text/javascript&quot;&gt;<br />jwplayer("my-video").setup({<br /> file: "'+document.getElementById('theFile').value+'",<br /> width: "580",<br /> height: "370",<br /> primary: "flash",<br /> androidhls: true<br />});<br />&lt;/script&gt;'
+  }
+    }
+    </script>
+ <style type="text/css">
+ p {
+    line-height: 0px;
+    margin: 0 0 1em;
+ }
+ </style>
+
+
+
+<body class="demo_page">
+
+
+
+
+<section id="demo_test">
+  <div class="section_wrapper clearfix">
+    <div class="demo_sidebar">
+      <h1></h1>
+
+      <form onsubmit="return false;">
+        
+        
+        
+        
+        
+        
+      </form>
+   
+   <form>
+   <p>
+    <input type="checkbox" id="hls" name="hls" value="hls"> <strong style="color:#000;"></strong>
+    
+    <br>
+    <input type="checkbox" onload = "this.checked = !this.checked" id="dash" name="dash" value="dash"> <strong style="color:#000;"></strong>
+    </p>  
+   </form>
+      
+      <form id="theForm2" name="theForm2">
+        <fieldset style="display:none;">
+          <textarea id="setupOptions" style="display:none;"></textarea>
+        </fieldset>
+        <input type="button" value="Setup Player" onclick="$.setupPlayer()" style="display:none;" />
+        <p><a href="#" id="submitBtn" class="small primary button" style="display:none;">Save URL</a></p>
+      </form>
+   
+   <br/>
+   
+   <p id="output"></p>
+
+<div id="theLink">
+</div>
+      
+    </div> <!-- demo_sidebar -->
+
+    <div class="demo_main">
+      <div id='my-video'></div>
+            
+      <h2 id="title"></h2>
+
+      <script type="text/javascript">
+  jwplayer('my-video').onError(function(evt){
+   try { console.log(evt.message); } catch(e) {}
+  });
+      function selectText(containerid) {
+          if (document.selection) {
+              var range = document.body.createTextRange();
+              range.moveToElementText(document.getElementById(containerid));
+              range.select();
+          } else if (window.getSelection) {
+              var range = document.createRange();
+              range.selectNode(document.getElementById(containerid));
+              window.getSelection().addRange(range);
+          }
+      }
+      </script>
+      <pre id="theCode" onclick="selectText('theCode')"></pre>
+    </div> <!-- demo_main -->
+    
+  </div> <!-- section_wrapper -->
+</section> <!-- demo_test -->
+
+</body>
+<script type="text/javascript" src="archivos/contenedor/speed/speed1_100.js"></script>
+  </div>
+  </html>
