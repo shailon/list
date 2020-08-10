@@ -1,278 +1,1041 @@
 <html>
+	
+	<configuration>
+
+<system.webServer>
+
+<rewrite>
+
+    <rules>
+
+       <rule name="HTTP to HTTPS redirect" stopProcessing="true">
+
+         <match url="(.*)" />
+
+         <conditions>
+
+           <add input="{HTTPS}" pattern="off" ignoreCase="true" />
+
+         </conditions>
+
+         <action type="Redirect" redirectType="Permanent" url="https://moncryd.com/{R:1}" />
+
+       </rule>
+
+    </rules>
+
+</rewrite>
+
+</system.webServer>
+
+</configuration>
+	
+	
+<cross-domain-policy>
+  <allow-access-from domain="*" />
+</cross-domain-policy>
+<title></title>
+<cross-domain-policy>
+  <allow-access-from domain="*" />
+</cross-domain-policy>
+<cross-domain-policy>
+  <allow-access-from domain="*" />
+</cross-domain-policy>
+<cross-domain-policy>
+  <allow-access-from domain="*" />
+</cross-domain-policy>
+<body bgcolor=""><table width="0" border="0">
+  <tbody>
 
 
-<div class="search-container">
-  <div class="search">
-    <input id="queryInput" class="search-bar"  type="text">
-    <button id="searchButton" class="search-button">
-      GO
-    </button>
-  </div>
-</div>
+
+
+
+  <!--1-->
+
+   <tr>
+      <th scope="col"><?xml version="1.0"?>
+
+
+<body bgcolor=""><table width="0" border="0">
+  <tbody>
+    <tr>
+      <th scope="col"><?xml version="1.0"?>
+        
+        <a href="#openModal1"></a>
+
+<div id="openModal1" class="modalDialog1">
+    <div> <a href="#close" title="Close" class="close">X</a>
+<style type="text/css">
+
+.modalDialog1 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog1:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog1 > div {
+    width: 700px;
+    height: 700px;
+    position: relative;
+    margin: 3% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
+
+</style>
 
 
 
 
-<div class="main-container">
-  <script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/47ecb65faa3c670042b5e4b4b1c79054.bin?disposition=attachment&filename=jquery-2.2.4.min.js"></script>
-  
-<script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/165526b96e9be17d142803ea52e7bf49.bin?disposition=attachment&filename=client.js?onload=onClientLoad"></script>
-
-
-
-
-<div id="youtube-channel"></div>
+        
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+<head>
+<title>Add to Playlist</title>
+ <script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/9b0ed3b4fd7a2eb3049b51cd26b48b9c0300e7b9.bin?disposition=attachment&filename=jwplayer6.10.js"></script>
+    <script type="text/javascript">
+        jwplayer.key = "X6kb26SYDzrSJSh04snwDPZET80gS3L0s90VHOGPp1jwy+6iE+Cx/lGZH1c=";</script>
+</head>
+<body>
+<div id="container"></div>
 <script type="text/javascript">
-//2016 mizTech NTU ESOE mikeZheng 
-var musicCards = [];
+    jwplayer("container").setup({
+        height: 254,
+        width: 720,
+        file: "http://content.bitsontherun.com/videos/nPripu9l-60830.mp4",
+        image: "http://content.bitsontherun.com/thumbs/nPripu9l-320.jpg",
+        title: "Big Buck Bunny trailer",
+        listbar: {
+        position: "right",
+        size: 280,
+        },
+        primary: 'flash'
+    }); 
+    function addVideo(videoUrl, videoThumb, videoTitle) {
+        var playlist = jwplayer().getPlaylist();
+        var newItem = {
+            file: videoUrl,
+            image: videoThumb,
+            title: videoTitle
+        };
+        playlist.push(newItem);
+        jwplayer().load(playlist);
+    }
+</script>
+<p>Click on one of the links below to add an item to the player:</p>
+<ul>
+  
+        <p>
+          <input type="text" autocomplete="off" value="https://www.youtube.com/watch?v=uO59tfQ2TbA";" /></br>
+          <input type="button" name="load" value="Load Stream" class="small primary button" onclick="addVideo();"></br> 
+        </p>
+        
+<li><a href="http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v5/16026/loading-a-playlist-into-the-player#" onclick="addVideo('http://content.bitsontherun.com/videos/yj1shGJB-60830.mp4', 'http://content.bitsontherun.com/thumbs/yj1shGJB-320.jpg', 'Sintel trailer'); return false;">Add the Sintel trailer to the playlist</a></li>
+<li><a href="http://www.longtailvideo.com/support/jw-player/jw-player-for-flash-v5/16026/loading-a-playlist-into-the-player#" onclick="addVideo('http://content.bitsontherun.com/videos/i8oQD9zd-kNspJqnJ.mp4', 'http://content.bitsontherun.com/thumbs/i8oQD9zd-640.jpg', 'Tears of Steel'); return false;">Add the Tears of Steel trailer to the playlist</a></li>
+</ul>
+</body>
 
-$(document).ready(function() {
-    //替按鈕綁上事件
-    $("#searchButton").on("click", function() {
-        var query = $("#queryInput").val();
-        //簡單防呆一下
-        if (query != "") {
-            loadYoutubeService($("#queryInput").val());
-            console.log(query + " 搜尋中..");
+
+
+
+
+
+        </center></th>
+      <th scope="col"><?xml version="1.0"?>
+        
+
+</th>
+    </tr>
+    <tr>
+      <th scope="row"><?xml version="1.0"?>
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+
+
+
+        </center></th>
+      <td><?xml version="1.0"?>
+        
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+</th>
+
+<!--2-->
+
+   <th scope="col"><?xml version="1.0"?>
+
+
+
+<body bgcolor=""><table width="0" border="0">
+  <tbody>
+    <tr>
+      <th scope="col"><?xml version="1.0"?>
+        
+        
+        <a href="#openModal2"></a>
+
+<div id="openModal2" class="modalDialog2">
+    <div> <a href="#close" title="Close" class="close">X</a>
+<style type="text/css">
+
+.modalDialog2 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog2:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog2 > div {
+    width: 854px;
+    height: 480px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
+
+</style>
+
+
+        
+        
+        
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+<!--add-->
+
+    <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "moncryd",
+        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+        parent: ["moncryd.com"]
+      });
+    </script>
+  
+
+
+
+
+        </center></th>
+      <th scope="col"><?xml version="1.0"?>
+        
+
+</th>
+    </tr>
+    <tr>
+      <th scope="row"><?xml version="1.0"?>
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+
+
+
+        </center></th>
+      <td><?xml version="1.0"?>
+        
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</th>
+
+
+ <!--3-->
+
+ <th scope="col"><?xml version="1.0"?>
+
+
+
+<body bgcolor=""><table width="0" border="0">
+  <tbody>
+    <tr>
+      <th scope="col"><?xml version="1.0"?>
+        
+        
+        
+        <a href="#openModal3"></a>
+
+<div id="openModal3" class="modalDialog3">
+    <div> <a href="#close" title="Close" class="close">X</a>
+<style type="text/css">
+
+.modalDialog3 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog3:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog3 > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
+
+</style>
+        
+        
+        
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+<!--add-->
+<img src="https://media.giphy.com/media/MFsqcBSoOKPbjtmvWz/giphy.gif" alt="Trulli" width="190" height="150">
+
+
+        </center></th>
+      <th scope="col"><?xml version="1.0"?>
+        
+
+</th>
+    </tr>
+    <tr>
+      <th scope="row"><?xml version="1.0"?>
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+
+
+        </center></th>
+      <td><?xml version="1.0"?>
+        
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</th>
+
+ <!--2-->
+
+
+   <th scope="col"><?xml version="1.0"?>
+
+
+
+<body bgcolor=""><table width="0" border="0">
+  <tbody>
+    <tr>
+      <th scope="col"><?xml version="1.0"?>
+        
+        <a href="#openModal4"></a>
+
+<div id="openModal4" class="modalDialog4">
+    <div> <a href="#close" title="Close" class="close">X</a>
+<style type="text/css">
+
+.modalDialog4 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog4:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog4 > div {
+    width: 400px;
+	height: 480px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
+
+</style>
+        
+        
+        
+        
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+
+        <script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/9b0ed3b4fd7a2eb3049b51cd26b48b9c0300e7b9.bin?disposition=attachment&filename=jwplayer6.10.js"></script>
+        <script type="text/javascript">jwplayer.key = "Q1Ft5yFT0nJBlCFnQAvJ7nC+uwr628IgJBzoCAnnn3tGVqUiRjtloYRetCh+EbI0";</script>
+        <center>
+          <div id="emergencycouplesatu1"></div>
+          <script type="text/javascript">
+    jwplayer("emergencycouplesatu1").setup({
+   sources: [
+
+{file: "https://www.youtube.com/watch?v=JEzqoRCgD5Q",
+  label:"720",
+       
+            type: "mp4",
+            primary: "flash",
+   image: "",
+            height: 357,
+            tracks: [{ 
+            file: "", 
+            label: "spanish",
+            kind: "captions",
+            "default": true 
+            },{ 
+            file: "", 
+            label: "English",
+            kind: "captions",}]
+            },
+{file: "",
+             label: "320p",
+ 
+}],
+        width: 350,
+            height: 200,
+  autostart: false,
+  mute: true,
+  stretching : "exactfit",
+ events:{
+        onBufferChange: function(callback) {
+              //  console.log(callback.buffer);
+               // console.log(jwplayer("emergencycouplesatu").getBuffer());
+            }
         }
     });
-});
+        </script>
+	    
 
-//向google 使用youtube服務
-function loadYoutubeService(query) {
-    gapi.client.load('youtube', 'v3', function() {
-        gapi.client.setApiKey('AIzaSyCRwMuGP50aOvrptyXRZtveE50faOLb8R0');
-        search(query);
-    });   
+
+        </center></th>
+      <th scope="col"><?xml version="1.0"?>
+        
+
+</th>
+    </tr>
+    <tr>
+      <th scope="row"><?xml version="1.0"?>
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+
+
+
+        </center></th>
+      <td><?xml version="1.0"?>
+        
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</th>
+
+
+    </tr>
+
+
+  <!--fila1 -->
+
+
+ <tr>
+      <th scope="row"><?xml version="1.0"?>
+
+
+
+<body bgcolor=""><table width="0" border="0">
+  <tbody>
+    <tr>
+      <th scope="col"><?xml version="1.0"?>
+        
+        
+        
+        <a href="#openModal5"></a>
+
+<div id="openModal5" class="modalDialog5">
+    <div> <a href="#close" title="Close" class="close">X</a>
+<style type="text/css">
+
+.modalDialog5 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
 }
-//搜尋
-function search(query) {
-    //對於搜尋上的其他功能可以參考googleapi
-    //https://developers.google.com/youtube/v3/docs/search/list#maxResults
-    var request = gapi.client.youtube.search.list({
-        part: 'snippet',
-        q: query,
-        maxResults: 2
-    });
-
-    request.execute(function(response) {
-        //將結果把所需部分進行擷取
-        $.each(response.items, function(i, item) {
-            if (!item['id']['playlistId']) {
-                var musicCard = {};
-                musicCard._id = item['id']['videoId'];
-               musicCard.src= "https://www.youtube.com/watch?v=" + musicCard._id;
-               musicCard.video= "https://www.youtube.com/watch?v=" + musicCard._id;
-                musicCard.file= "https://www.youtube.com/watch?v=" + musicCard._id;
-                musicCard.title = item['snippet']['title'];
-                musicCard.url = "https://www.youtube.com/embed/" + musicCard._id;
-                musicCard.description = item['snippet']['description'];
-                musicCards.push(musicCard);
-            }
-        });
-        // console.log(musicCards);
-        //將VIEW抽出來另外生成
-        renderView();
-    });
+.modalDialog5:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog5 > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
 }
 
+</style>
+        
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
 
 
-function renderView() {
-    var htmlString = "";
-    musicCards.forEach(function(musicCard, i) {
-        var card = createCard(musicCard._id, musicCard.title, musicCard.description, musicCard.url);
 
-        htmlString += card;
-    });
 
-    $('#youtube-channel').html(htmlString);
+        </center></th>
+      <th scope="col"><?xml version="1.0"?>
+        
 
+</th>
+    </tr>
+    <tr>
+      <th scope="row"><?xml version="1.0"?>
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+
+
+
+        </center></th>
+      <td><?xml version="1.0"?>
+        
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</th>
+
+<!--fila2 -->
+
+
+      <th scope="row"><?xml version="1.0"?>
+
+
+
+<body bgcolor=""><table width="0" border="0">
+  <tbody>
+    <tr>
+      <th scope="col"><?xml version="1.0"?>
+        
+        
+        
+        <a href="#openModal6"></a>
+
+<div id="openModal6" class="modalDialog6">
+    <div> <a href="#close" title="Close" class="close">X</a>
+<style type="text/css">
+
+.modalDialog6 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog6:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog6 > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
 }
 
+</style>
+        
+        
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
 
-function createCard(_id, title, description, url,file,src) {
-    var card =
-        '<div class="card">' +
+
+
+
+
+        </center></th>
+      <th scope="col"><?xml version="1.0"?>
         
-        '<div  class="demo_sidebar"  >' +
-        '<h1JW Player Stream Tester>'+
+
+</th>
+    </tr>
+    <tr>
+      <th scope="row"><?xml version="1.0"?>
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+
+
+
+        </center></th>
+      <td><?xml version="1.0"?>
         
-      
-        '<p>'+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</th>
+
+
+
+<!--fila3 -->
+
+
+
+      <th scope="row"><?xml version="1.0"?>
+
+
+
+<body bgcolor=""><table width="0" border="0">
+  <tbody>
+    <tr>
+      <th scope="col"><?xml version="1.0"?>
         
-         '<input type="button" name="load" value="play" class="small primary button" onclick="loadHls();">' +
-         '<input type="text" id="theFile" autocomplete="off" value="https://www.youtube.com/watch?v=' + _id + '">' +
-         
         
-        '</p>' +
-         '<div class="info">' +
-        '<img src="http://img.youtube.com/vi/' + _id + '/0.jpg" alt="' + description + '">' +
-        '</div>' +
-        '<div class="content">' +
-        '<a><h2>' + title + '</h2></a>' +
-        '</div>' +
-        '</div>' +
-        
-        
-        
-        
-       
-        
-        
-        '</div>';
-    return card;
+        <a href="#openModal7"></a>
+
+<div id="openModal7" class="modalDialog7">
+    <div> <a href="#close" title="Close" class="close">X</a>
+<style type="text/css">
+
+.modalDialog7 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
 }
-</script>
-</div>
+.modalDialog7:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog7 > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
 
-
- <div>
-  
-
-  <script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/9b0ed3b4fd7a2eb3049b51cd26b48b9c0300e7b9.bin?disposition=attachment&filename=jwplayer6.10.js"></script>
-    <script type="text/javascript">jwplayer.key ="X6kb26SYDzrSJSh04snwDPZET80gS3L0s90VHOGPp1jwy+6iE+Cx/lGZH1c=";</script>
-
-
-  <script type='text/javascript'>
-    
-    
-    
-    
-    function loadHls(){
-  document.getElementById('submitBtn').style.display = 'inline-block';
-  
-  if (document.getElementById('hls').checked) {
-   var thePlayer = jwplayer('my-video').setup({
-   file: ''+document.getElementById('theFile').value+'',
-   width: '480',
-   height: '270',
-   androidhls:'true',
-   primary: 'flash',
-   androidhls:"true",
-   autostart: 'true',
-   type: 'hls',
-   });
-   var thePlayer2 = '{file: "'+document.getElementById('theFile').value+'",width: "580",height: "370",primary: "flash",androidhls: true,type: "hls"}'
-   document.getElementById("setupOptions").value = thePlayer2;
-   document.getElementById('theCode').innerHTML = 'ENTER PLAYER JS LIBRARY HERE 1<br />&lt;script&gt;jwplayer.key=&quot;2U/m9jOYEC49U1j3cNoou7IjxvGS5j03XTpetE5wCVBAwRqhG9pSYWQIMW0=&quot;&lt;/script&gt;<br /><br />&lt;div id=&quot;my-video&quot;&gt;&lt;/div&gt;<br />&lt;script type=&quot;text/javascript&quot;&gt;<br />jwplayer("my-video").setup({<br /> file: "'+document.getElementById('theFile').value+'",<br /> width: "580",<br /> height: "370",<br /> primary: "flash",<br /> androidhls: true,<br /> type: "hls"<br />});<br />&lt;/script&gt;'
-        } 
+</style>
         
         
-  else if (document.getElementById('dash').checked){
-            var thePlayer = jwplayer('my-video').setup({
-            file: ''+document.getElementById('theFile').value+'',
-   width: '480',
-   height: '270',
-   dash:"true",
-   primary: 'html5',
-   autostart: 'true',
-   });
-   var thePlayer2 = '{file: "'+document.getElementById('theFile').value+'",width: "580",height: "370",primary: "html5",dash:true}'
-   document.getElementById("setupOptions").value = thePlayer2;
-   document.getElementById('theCode').innerHTML = 'ENTER PLAYER JS LIBRARY HERE 2<br />&lt;script&gt;jwplayer.key=&quot;2U/m9jOYEC49U1j3cNoou7IjxvGS5j03XTpetE5wCVBAwRqhG9pSYWQIMW0=&quot;&lt;/script&gt;<br /><br />&lt;div id=&quot;my-video&quot;&gt;&lt;/div&gt;<br />&lt;script type=&quot;text/javascript&quot;&gt;<br />jwplayer("my-video").setup({<br /> file: "'+document.getElementById('theFile').value+'",<br /> width: "580",<br /> height: "370",<br /> primary: "html5",<br /> dash: true<br />});<br />&lt;/script&gt;'
-  } 
-  
-  else {
-   var thePlayer = jwplayer('my-video').setup
-   
-   ({
-   file: ''+document.getElementById('theFile').value+'',
-   width: '480',
-   height: '270',
-   primary: 'flash',
-   androidhls: "true",
-   autostart: 'true'
-   });
-   
-   var thePlayer2 = '{file: "'+document.getElementById('theFile').value+'",width: "580",height: "370",primary: "flash",androidhls:true}'
-   document.getElementById("setupOptions").value = thePlayer2;
-   document.getElementById('theCode').innerHTML = 'ENTER PLAYER JS LIBRARY HERE 3<br />&lt;script&gt;jwplayer.key=&quot;2U/m9jOYEC49U1j3cNoou7IjxvGS5j03XTpetE5wCVBAwRqhG9pSYWQIMW0=&quot;&lt;/script&gt;<br /><br />&lt;div id=&quot;my-video&quot;&gt;&lt;/div&gt;<br />&lt;script type=&quot;text/javascript&quot;&gt;<br />jwplayer("my-video").setup({<br /> file: "'+document.getElementById('theFile').value+'",<br /> width: "580",<br /> height: "370",<br /> primary: "flash",<br /> androidhls: true<br />});<br />&lt;/script&gt;'
-  }
-    }
-    </script>
- <style type="text/css">
- p {
-    line-height: 0px;
-    margin: 0 0 1em;
- }
- </style>
-
-
-
-<body class="demo_page">
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
 
 
 
 
-<section id="demo_test">
-  <div class="section_wrapper clearfix">
-    <div class="demo_sidebar">
-      <h1></h1>
+        </center></th>
+      <th scope="col"><?xml version="1.0"?>
+        
 
-      <form onsubmit="return false;">
+</th>
+    </tr>
+    <tr>
+      <th scope="row"><?xml version="1.0"?>
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+
+
+        </center></th>
+      <td><?xml version="1.0"?>
+        
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</th>
+
+      <td><?xml version="1.0"?>
+
+
+
+
+<body bgcolor=""><table width="0" border="0">
+  <tbody>
+    <tr>
+      <th scope="col"><?xml version="1.0"?>
+        
+        <a href="#openModal8"></a>
+
+<div id="openModal8" class="modalDialog8">
+    <div> <a href="#close" title="Close" class="close">X</a>
+<style type="text/css">
+
+.modalDialog8 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog8:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog8 > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
+
+</style>
         
         
         
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
         
+        </center></th>
+      <th scope="col"><?xml version="1.0"?>
         
+
+</th>
+    </tr>
+    <tr>
+      <th scope="row"><?xml version="1.0"?>
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+
+
         
-      </form>
-   
-   <form>
-   <p>
-    <input type="checkbox" id="hls" name="hls" value="hls"> <strong style="color:#000;"></strong>
-    
-    <br>
-    <input type="checkbox" onload = "this.checked = !this.checked" id="dash" name="dash" value="dash"> <strong style="color:#000;"></strong>
-    </p>  
-   </form>
-      
-      <form id="theForm2" name="theForm2">
-        <fieldset style="display:none;">
-          <textarea id="setupOptions" style="display:none;"></textarea>
-        </fieldset>
-        <input type="button" value="Setup Player" onclick="$.setupPlayer()" style="display:none;" />
-        <p><a href="#" id="submitBtn" class="small primary button" style="display:none;">Save URL</a></p>
-      </form>
-   
-   <br/>
-   
-   <p id="output"></p>
+        </center></th>
+      <td><?xml version="1.0"?>
+        
 
-<div id="theLink">
-</div>
-      
-    </div> <!-- demo_sidebar -->
 
-    <div class="demo_main">
-      <div id='my-video'></div>
-            
-      <h2 id="title"></h2>
+</td>
+    </tr>
+  </tbody>
+</table>
 
-      <script type="text/javascript">
-  jwplayer('my-video').onError(function(evt){
-   try { console.log(evt.message); } catch(e) {}
-  });
-      function selectText(containerid) {
-          if (document.selection) {
-              var range = document.body.createTextRange();
-              range.moveToElementText(document.getElementById(containerid));
-              range.select();
-          } else if (window.getSelection) {
-              var range = document.createRange();
-              range.selectNode(document.getElementById(containerid));
-              window.getSelection().addRange(range);
-          }
-      }
-      </script>
-      <pre id="theCode" onclick="selectText('theCode')"></pre>
-    </div> <!-- demo_main -->
-    
-  </div> <!-- section_wrapper -->
-</section> <!-- demo_test -->
 
-</body>
-<script type="text/javascript" src="archivos/contenedor/speed/speed1_100.js"></script>
-  </div>
-  </html>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!--
+
+ <input type="button" 
+
+onclick="
+jwplayer(emergencycouplesatu1).play();
+jwplayer(emergencycouplesatu2).play();
+jwplayer(emergencycouplesatu3).play();" 
+
+value="play" />
+
+<input type="button" 
+
+onclick="
+jwplayer(emergencycouplesatu1).pause();
+jwplayer(emergencycouplesatu2).pause();
+jwplayer(emergencycouplesatu3).pause();" 
+
+value="pause" /> 
+
+-->
+</html>
