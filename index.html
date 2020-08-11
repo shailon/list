@@ -59,8 +59,8 @@
     pointer-events: auto;
 }
 .modalDialog1 > div {
-    width: 700px;
-    height: 700px;
+    width: 100%;
+    height: 100%;
     position: relative;
     margin: 3% auto;
     padding: 5px 20px 13px 20px;
@@ -222,7 +222,7 @@ function search(query) {
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
         q: query,
-        maxResults: 2
+        maxResults: 4
     });
 
     request.execute(function(response) {
