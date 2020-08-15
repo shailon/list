@@ -354,7 +354,7 @@ function showResults(results) {
                 var musicCard = {};
                 musicCard._id = item['id']['videoId'];
                 musicCard.title = item['snippet']['title'];
-                musicCard.url = "https://www.youtube.com/embed/" + musicCard._id;
+                musicCard.url = "https://www.youtube.com/watch?v=" + musicCard._id;
                 musicCard.description = item['snippet']['description'];
                 musicCards.push(musicCard);
             }
@@ -372,6 +372,7 @@ function showResults(results) {
 }
 
 
+
 function createCard(_id, title, description, url, addVideo, playlist) {
     var card =
         '<div class="card">' +
@@ -379,12 +380,13 @@ function createCard(_id, title, description, url, addVideo, playlist) {
         '<img src="http://img.youtube.com/vi/' + _id + '/0.jpg" alt="' + description + '">' +
         '</div>' +
         '<div class="content">' +
-        '<a id="playlist" onclick=addVideo("'+url+'")><h2>' + title + '</h2></a>'+
+        '<a id="playlist" onclick=addVideo("'+url+'")>https://www.youtube.com/watch?v=' + _id +'<h2>' + title + '</h2></a>'+
  	'<p>' + description + '</p>' +
         '</div>' +
         '</div>';
     return card;
 }
+
 </script>
 </div>
 </body>
