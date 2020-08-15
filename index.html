@@ -372,22 +372,19 @@ function showResults(results) {
 }
 
 
-function createCard(_id, title, description, url) {
+function createCard(_id, title, description, url, addVideo, playlist) {
     var card =
         '<div class="card">' +
         '<div class="info">' +
         '<img src="http://img.youtube.com/vi/' + _id + '/0.jpg" alt="' + description + '">' +
         '</div>' +
         '<div class="content">' +
-        '<a href="'+url+'"><h2>' + title + '</h2></a>' +
-        '<a href="'+url+'">https://www.youtube.com/embed/' + _id + '</a>' +
-        '<p>' + description + '</p>' +
+        '<a id="playlist" onclick=addVideo("'+url+'")><h2>' + title + '</h2></a>'+
+ 	'<p>' + description + '</p>' +
         '</div>' +
         '</div>';
     return card;
-    
 }
-
 </script>
 </div>
 </body>
