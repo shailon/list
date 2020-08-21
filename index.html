@@ -2,103 +2,456 @@
 <html>
 
 
-<cross-domain-policy>
-  <allow-access-from domain="*" />
-</cross-domain-policy>
-<title></title>
-<cross-domain-policy>
-  <allow-access-from domain="*" />
-</cross-domain-policy>
-<cross-domain-policy>
-  <allow-access-from domain="*" />
-</cross-domain-policy>
-<cross-domain-policy>
-  <allow-access-from domain="*" />
-</cross-domain-policy>
-<body bgcolor=""><table width="0" border="0">
-  <tbody>
 
-
-
-
-
-  <!--1-->
-
-   <tr>
-      <th scope="col"><?xml version="1.0"?>
-
-
-<body bgcolor=""><table width="0" border="0">
-  <tbody>
-    <tr>
-      <th scope="col"><?xml version="1.0"?>
         
-        <a href="#openModal1">.</a>
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+        
+<!--add 1-->
+<body>
 
-<div id="openModal1" class="modalDialog1">
-    <div> <a href="#close" title="Close" class="close">X</a>
+
+
 <style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
 
-.modalDialog1 {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
+t /* The Modal (background) */
+.modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    
+    z-index: 1; /* Sit on top */
     left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-.modalDialog1:target {
-    opacity:1;
-    pointer-events: auto;
+/* Modal Content/Box */
+.modal1-content {
+	position: relative;
+    background-color: #fefefe;
+    margin: 10px; /* 15% from the top and centered */
+    padding: 0;
+    border: 1px solid #888;
+	border-radius: 15px;
+  top: 0;
+    width: 570px; /* Could be more or less, depending on screen size */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
 }
-.modalDialog1 > div {
-    width: 90%;
-    height: 100%;
-    position: relative;
-    margin: 3% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
 }
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+/* The Close Button */
+.close1 {
+    color: #666;
+    float: right;
+    font-size: 20px;
     font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
 }
-.close:hover {
-    background: #00d9ff;
+.close1:hover, .close1:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Modal Header */
+.modal1-header {
+    padding: 2px 16px;
+    background-color: #f0f0f0;
+	font-size: 22px;
+	text-align: center;
+    color: black;
+}
+/* Modal Body */
+.modal1-body {padding: 2px 16px;}
+.button1 {
+position: relative;
+    
+  top: 0;
+   
+}
+</style>
+
+
+
+	<!-- Trigger/Open The Modal -->
+	<button id="myBtn1" class="button button1">New world twitch</button>
+	<!-- The Modal -->
+		<div id="myModal1" class="modal1">
+		<!-- Modal content -->
+		<div class="modal1-content">
+		<div class="modal1-header">
+			<span class="close1">X</span>
+			
+		</div>
+		<div class="modal1-body">
+		
+      <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 500,
+        height: 250,
+        channel: "moncryd",
+        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+        parent: ["moncryd.com"]
+      });
+    </script>
+  
+
+
+
+</div>
+    
+<script>
+// Get the modal
+var modal1 = document.getElementById('myModal1');
+// Get the button that opens the modal
+var btn1 = document.getElementById("myBtn1");
+// Get the <span> element that closes the modal
+var span1 = document.getElementsByClassName("close1")[0];
+// When the user clicks on the button, open the modal
+btn1.onclick = function() {
+    modal1.style.display = "block";
+	modal1.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span1.onclick = function() {
+    modal1.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+}
+</script>
+
+
+
+		</div>
+		
+		</div>
+    
+   
+    </body>
+
+
+       <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+<!--add 2-->
+<body>
+
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+t /* The Modal (background) */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal2-content {
+	position: relative;
+    background-color: #fefefe;
+    margin: 10px; /* 15% from the top and centered */
+    padding: 0;
+   
+    border: 1px solid #888;
+	border-radius: 15px;
+    width: 400px; /* Could be more or less, depending on screen size */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+/* The Close Button */
+.close2 {
+    color: #666;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+.close2:hover, .close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Modal Header */
+.modal2-header {
+    padding: 2px 16px;
+    background-color: #f0f0f0;
+	font-size: 22px;
+	text-align: center;
+    color: black;
+}
+/* Modal Body */
+.modal2-body {padding: 2px 16px;}
+.button2 {
+position: relative;
+top: 0px;
+margin: 10px; /* 15% from the top and centered */
+ 
+   
 }
 
 </style>
 
 
 
+	<!-- Trigger/Open The Modal -->
+	<button id="myBtn2" class="button button2">New world twitter</button>
+	<!-- The Modal -->
+		<div id="myModal2" class="modal2">
+		<!-- Modal content -->
+		<div class="modal2-content">
+		<div class="modal2-header">
+			<span class="close2">X</span>
+			
+		</div>
+		<div class="modal2-body">
+		
+<script>
+// Get the modal
+var modal2 = document.getElementById('myModal2');
+// Get the button that opens the modal
+var btn2 = document.getElementById("myBtn2");
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("close2")[0];
+// When the user clicks on the button, open the modal
+btn2.onclick = function() {
+    modal2.style.display = "block";
+	modal2.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+</script>
 
-        
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<div class="row">
+   <div class="col-md-4"></div>
+   <div class="container2">
+      <div class="col-md-4">
+         <div class="panel panel-danger">
+            <div class="panel-heading">
+               <h3 class="panel-title"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+                  New World Live
+               </h3>
+            </div>
+            <div class="panel-body">
+               <a class="twitter-timeline" data-width="100%" href="https://twitter.com/playnewworld">Tweets by New World</a> 
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-4">
+   </div>
+</div>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<style type="text/css">
+.twitter-timeline {
+  max-width: 100%;
+  max-height: 1000px;
+}
+.fa {
+  font-size: 25px;
+  color: #FFFFFF;
+}
+.panel-title {
+ font-size: 25px;
+ color: #FFFFFF;
+ font-family: 'Open Sans', sans-serif;
+}
+.panel-heading {
+ background-color: #1da1f2 !important;
+ color: #1da1f2 !important;
+}
+.panel {
+ margin-top: 25px;
+}
+
+</style>
+		</div>
+		
+		</div>
+    </div>
+    </body>
+
+   <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+<!--add 3-->
+<body>
+
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+t /* The Modal (background) */
+.modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal3-content {
+	position: relative;
+    background-color: #fefefe;
+    margin: 10px; /* 15% from the top and centered */
+    padding: 0;
+   
+    border: 1px solid #888;
+	border-radius: 15px;
+    width: 400px; /* Could be more or less, depending on screen size */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+/* The Close Button */
+.close3 {
+    color: #666;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+.close3:hover, .close3:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Modal Header */
+.modal3-header {
+    padding: 2px 16px;
+    background-color: #f0f0f0;
+	font-size: 22px;
+	text-align: center;
+    color: black;
+}
+/* Modal Body */
+.modal3-body {padding: 2px 16px;}
+.button3 {
+position: relative;
+top: 0px;
+margin: 10px; /* 15% from the top and centered */
+ 
+   
+}
+
+</style>
+
+
+
+	<!-- Trigger/Open The Modal -->
+	<button id="myBtn3" class="button button3">New world videos</button>
+	<!-- The Modal -->
+		<div id="myModal3" class="modal3">
+		<!-- Modal content -->
+		<div class="modal3-content">
+		<div class="modal3-header">
+			<span class="close3">X</span>
+			
+		</div>
+		<div class="modal3-body">
+		
+<script>
+// Get the modal
+var modal3 = document.getElementById('myModal3');
+// Get the button that opens the modal
+var btn3 = document.getElementById("myBtn3");
+// Get the <span> element that closes the modal
+var span3 = document.getElementsByClassName("close3")[0];
+// When the user clicks on the button, open the modal
+btn3.onclick = function() {
+    modal3.style.display = "block";
+	modal3.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function() {
+    modal3.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+
 
 
 
@@ -224,7 +577,7 @@ play: false,
 <div>
 <style type="text/css">
 .card{
-    width: 50%;
+    width: 100%;
     border-radius: 5px;
     background-color: #FFF;
     box-shadow: 0px 1px 4px 5px rgba(0, 0, 0, 0.1);
@@ -407,880 +760,22 @@ function createCard(_id, title, description, url, addVideo, playlist) {
 </body>
 
 
-</div>
-</div>
-       </th>
-      <th scope="col"><?xml version="1.0"?>
-        
 
-</th>
-    </tr>
-    <tr>
-      <th scope="row"><?xml version="1.0"?>
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
 
 
 
 
-        </th>
-      <td><?xml version="1.0"?>
-        
 
 
-</td>
-    </tr>
-  </tbody>
-</table>
-</body>
-</th>
 
+		</div>
+		
+		</div>
+    </div>
+    </body>
 
 
 
-<!--2-->
 
-   <th scope="col"><?xml version="1.0"?>
 
-
-
-<body bgcolor=""><table width="0" border="0">
-  <tbody>
-    <tr>
-      <th scope="col"><?xml version="1.0"?>
-        
-        
-        <a href="#openModal2"></a>
-
-<div id="openModal2" class="modalDialog2">
-    <div> <a href="#close" title="Close" class="close">X</a>
-<style type="text/css">
-
-.modalDialog2 {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog2:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog2 > div {
-    width: 854px;
-    height: 480px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-}
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-    background: #00d9ff;
-}
-
-</style>
-
-
-        
-        
-        
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-<!--add-->
-
-    <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
-
-    <!-- Load the Twitch embed script -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
-        channel: "moncryd",
-        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
-        parent: ["moncryd.com"]
-      });
-    </script>
-  
-
-
-
-</div>
-</div>
-        </th>
-      <th scope="col"><?xml version="1.0"?>
-        
-
-</th>
-    </tr>
-    <tr>
-      <th scope="row"><?xml version="1.0"?>
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-
-
-
-        </th>
-      <td><?xml version="1.0"?>
-        
-
-
-</td>
-    </tr>
-  </tbody>
-</table>
-</body>
-
-</th>
-
-
-
-
-
- <!--3-->
-
- <th scope="col"><?xml version="1.0"?>
-
-
-
-<body bgcolor=""><table width="0" border="0">
-  <tbody>
-    <tr>
-      <th scope="col"><?xml version="1.0"?>
-        
-        
-        
-        <a href="#openModal3">.</a>
-
-<div id="openModal3" class="modalDialog3">
-    <div> <a href="#close" title="Close" class="close">X</a>
-<style type="text/css">
-
-.modalDialog3 {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog3:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog3 > div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-}
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-    background: #00d9ff;
-}
-
-</style>
-        
-        
-        
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-<!--add-->
-<img src="https://media.giphy.com/media/MFsqcBSoOKPbjtmvWz/giphy.gif" alt="Trulli" width="190" height="150">
-
-</div>
-</div>
-       </th>
-      <th scope="col"><?xml version="1.0"?>
-        
-
-</th>
-    </tr>
-    <tr>
-      <th scope="row"><?xml version="1.0"?>
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-
-
-        </th>
-      <td><?xml version="1.0"?>
-        
-
-
-</td>
-    </tr>
-  </tbody>
-</table>
-
-</body>
-</th>
-
- <!--2-->
-
-
-   <th scope="col"><?xml version="1.0"?>
-
-
-
-<body bgcolor=""><table width="0" border="0">
-  <tbody>
-    <tr>
-      <th scope="col"><?xml version="1.0"?>
-        
-        <a href="#openModal4"></a>
-
-<div id="openModal4" class="modalDialog4">
-    <div> <a href="#close" title="Close" class="close">X</a>
-<style type="text/css">
-
-.modalDialog4 {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog4:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog4 > div {
-    width: 400px;
-	height: 480px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-}
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-    background: #00d9ff;
-}
-
-</style>
-        
-        
-        
-        
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-
-        <script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/9b0ed3b4fd7a2eb3049b51cd26b48b9c0300e7b9.bin?disposition=attachment&filename=jwplayer6.10.js"></script>
-        <script type="text/javascript">jwplayer.key = "Q1Ft5yFT0nJBlCFnQAvJ7nC+uwr628IgJBzoCAnnn3tGVqUiRjtloYRetCh+EbI0";</script>
-      
-          <div id="emergencycouplesatu1"></div>
-          <script type="text/javascript">
-    jwplayer("emergencycouplesatu1").setup({
-   sources: [
-
-{file: "https://www.youtube.com/watch?v=JEzqoRCgD5Q",
-  label:"720",
-       
-            type: "mp4",
-            primary: "flash",
-   image: "",
-            height: 357,
-            tracks: [{ 
-            file: "", 
-            label: "spanish",
-            kind: "captions",
-            "default": true 
-            },{ 
-            file: "", 
-            label: "English",
-            kind: "captions",}]
-            },
-{file: "",
-             label: "320p",
- 
-}],
-        width: 350,
-            height: 200,
-  autostart: false,
-  mute: true,
-  stretching : "exactfit",
- events:{
-        onBufferChange: function(callback) {
-              //  console.log(callback.buffer);
-               // console.log(jwplayer("emergencycouplesatu").getBuffer());
-            }
-        }
-    });
-        </script>
-	    
-
-</div>
-</div>
-        </th>
-      <th scope="col"><?xml version="1.0"?>
-        
-
-</th>
-    </tr>
-    <tr>
-      <th scope="row"><?xml version="1.0"?>
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-
-
-
-        </th>
-      <td><?xml version="1.0"?>
-        
-
-
-</td>
-    </tr>
-  </tbody>
-</table>
-
-</body>
-</th>
-
-
-    </tr>
-
-
-  <!--fila1 -->
-
-
- <tr>
-      <th scope="row"><?xml version="1.0"?>
-
-
-
-<body bgcolor=""><table width="0" border="0">
-  <tbody>
-    <tr>
-      <th scope="col"><?xml version="1.0"?>
-        
-        
-        
-        <a href="#openModal5"></a>
-
-<div id="openModal5" class="modalDialog5">
-    <div> <a href="#close" title="Close" class="close">X</a>
-<style type="text/css">
-
-.modalDialog5 {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog5:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog5 > div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-}
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-    background: #00d9ff;
-}
-
-</style>
-        
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-
-</div>
-</div>
-
-       </th>
-      <th scope="col"><?xml version="1.0"?>
-        
-
-</th>
-    </tr>
-    <tr>
-      <th scope="row"><?xml version="1.0"?>
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-
-
-
-        </th>
-      <td><?xml version="1.0"?>
-        
-
-
-</td>
-    </tr>
-  </tbody>
-</table>
-
-</body>
-</th>
-
-<!--fila2 -->
-
-
-      <th scope="row"><?xml version="1.0"?>
-
-
-
-<body bgcolor=""><table width="0" border="0">
-  <tbody>
-    <tr>
-      <th scope="col"><?xml version="1.0"?>
-        
-        
-        
-        <a href="#openModal6"></a>
-
-<div id="openModal6" class="modalDialog6">
-    <div> <a href="#close" title="Close" class="close">X</a>
-<style type="text/css">
-
-.modalDialog6 {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog6:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog6 > div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-}
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-    background: #00d9ff;
-}
-
-</style>
-        
-        
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-
-
-</div>
-</div>
-
-       </th>
-      <th scope="col"><?xml version="1.0"?>
-        
-
-</th>
-    </tr>
-    <tr>
-      <th scope="row"><?xml version="1.0"?>
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-
-
-
-        </th>
-      <td><?xml version="1.0"?>
-        
-
-
-</td>
-    </tr>
-  </tbody>
-</table>
-</body>
-
-</th>
-
-
-
-<!--fila3 -->
-
-
-
-      <th scope="row"><?xml version="1.0"?>
-
-
-
-<body bgcolor=""><table width="0" border="0">
-  <tbody>
-    <tr>
-      <th scope="col"><?xml version="1.0"?>
-        
-        
-        <a href="#openModal7"></a>
-
-<div id="openModal7" class="modalDialog7">
-    <div> <a href="#close" title="Close" class="close">X</a>
-<style type="text/css">
-
-.modalDialog7 {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog7:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog7 > div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-}
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-    background: #00d9ff;
-}
-
-</style>
-        
-        
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-
-
-</div>
-</div>
-      </th>
-      <th scope="col"><?xml version="1.0"?>
-        
-
-</th>
-    </tr>
-    <tr>
-      <th scope="row"><?xml version="1.0"?>
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-
-
-       </th>
-      <td><?xml version="1.0"?>
-        
-
-
-</td>
-    </tr>
-  </tbody>
-</table>
-</body>
-
-</th>
-
-      <td><?xml version="1.0"?>
-
-
-
-
-<body bgcolor=""><table width="0" border="0">
-  <tbody>
-    <tr>
-      <th scope="col"><?xml version="1.0"?>
-        
-        <a href="#openModal8"></a>
-
-<div id="openModal8" class="modalDialog8">
-    <div> <a href="#close" title="Close" class="close">X</a>
-<style type="text/css">
-
-.modalDialog8 {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog8:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog8 > div {
-    width: 400px;
-    position: relative;
-    margin: 10% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-}
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-    background: #00d9ff;
-}
-
-</style>
-        
-        
-        
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-</div>
-</div>
-       </th>
-      <th scope="col"><?xml version="1.0"?>
-        
-
-</th>
-    </tr>
-    <tr>
-      <th scope="row"><?xml version="1.0"?>
-        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-
-
-        
-        </th>
-      <td><?xml version="1.0"?>
-        
-
-
-</td>
-    </tr>
-    </tbody>
-</table>
-
-</body>
-        </td>
-    </tr>
-  </tbody>
-</table>
-
-
-<!--
-
- <input type="button" 
-
-onclick="
-jwplayer(emergencycouplesatu1).play();
-jwplayer(emergencycouplesatu2).play();
-jwplayer(emergencycouplesatu3).play();" 
-
-value="play" />
-
-<input type="button" 
-
-onclick="
-jwplayer(emergencycouplesatu1).pause();
-jwplayer(emergencycouplesatu2).pause();
-jwplayer(emergencycouplesatu3).pause();" 
-
-value="pause" /> 
-
--->
-</body>
 </html>
