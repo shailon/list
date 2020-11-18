@@ -486,6 +486,10 @@ window.onclick = function(event) {
 
 
  <form id="search-term">
+	
+<button id="btn1">Remove div element</button>
+<button id="btn2">Empty div element</button>	 
+	 
     <input id="queryInput"   type="text">
     <button id="searchButton" class="search-button" type="text">
       Go
@@ -716,7 +720,21 @@ play: false,
 </style>	
 <script type="text/javascript">
 
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("#search-results").remove();
+    });
+ $("#btn2").click(function(){
+        $("#search-results").empty();
+       
 
+    });
+
+});
+
+	
+	
+	
 
 //2016 mizTech NTU ESOE mikeZheng 
 var musicCards = [];
