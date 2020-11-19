@@ -491,7 +491,8 @@ window.onclick = function(event) {
 	 
    
 	 <input id="queryInput" autocapitalize="none" autocomplete="off" autocorrect="off" name="search_query" tabindex="0" type="text" spellcheck="false" placeholder="Search" aria-label="Search" aria-haspopup="false" role="combobox" aria-autocomplete="list" dir="ltr" class="ytd-searchbox" style="outline: none;">
-    <button id="searchButton" class="search-button" type="text">
+    <a id="click3" href="#">bb</a>
+	 <button id="searchButton" class="search-button" type="text">
       Go
       
     </button>
@@ -736,6 +737,10 @@ $(document).ready(function(){
     
   $("#click2").click(function(){
     $("#search_results").html(old);
+  });
+	
+	 $("#click3").click(function(){
+    $("#search-term").html(old);
   });
 });	
 	
