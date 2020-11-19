@@ -740,7 +740,7 @@ function aliminarHijos() {
   var search_results = document.getElementById("search_results");
   for (var i = 0; i < search_results.children.length; i++) {
     var content = search_results.children[i]
-    search_results.remove(content)
+    search_results.empty(content)
   }
 }	
 	
