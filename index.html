@@ -613,22 +613,10 @@ play: false,
 <body>
 
 
-<button onclick="aliminarHijos()" type="button" name="button">Eliminar Hijos</button>
+<input type="reset" id="configreset" value="Reset">
 
 <div id="search_results" class="main-container">
 	
-	 <div class="content">
-    
-  </div>
-  <div class="content">
-    
-  </div>
-   <div class="content">
-    
-  </div>
-  <div class="content">
-    
-  </div>
 	
 	
 	</div>
@@ -736,14 +724,9 @@ play: false,
 </style>	
 <script type="text/javascript">
 
-function aliminarHijos() {
-  var search_results = document.getElementById("search_results");
-  for (var i = 0; i < search_results.children.length; i++) {
-    var content = search_results.children[i]
-    search_results.empty()
-  }
-}	
-	
+ $('#configreset').click(function(){
+            $('#search_results')[0].reset();
+ });
 	
 
 
