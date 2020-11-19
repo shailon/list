@@ -613,7 +613,9 @@ play: false,
 <body>
 
 
-<input type="reset" id="configreset" value="Reset">
+<a id="click1" href="#">Add</a><a id="click2" href="#">Reset</a>
+
+
 
 <div id="search_results" class="main-container">
 	
@@ -724,9 +726,19 @@ play: false,
 </style>	
 <script type="text/javascript">
 
- $('#configreset').click(function(){
-            $('#search_results')[0].reset();
- });
+$(document).ready(function(){
+  var old="";
+  $("#click1").click(function(){
+    old=$("#search_results").html();
+    $("#search_results").html("asdfad");
+  });
+    
+  $("#click2").click(function(){
+    $("#search_results").html(old);
+  });
+});	
+	
+	
 	
 
 
