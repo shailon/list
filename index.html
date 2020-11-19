@@ -613,11 +613,27 @@ play: false,
 <body>
 
 
+<button onclick="aliminarHijos()" type="button" name="button">Eliminar Hijos</button>
 
-<div id="search-results" class="main-container"></div>
-	<div class=card></div>
-<button id="btn1">Remove div element</button>
-<button id="btn2">Empty div element</button>	 
+<div id="search_results" class="main-container">
+	
+	 <div class="card">
+    
+  </div>
+  <div class="card">
+    
+  </div>
+   <div class="card">
+    
+  </div>
+  <div class="card">
+    
+  </div>
+	
+	
+	</div>
+	
+	 
 
 <div>
 <style type="text/css">
@@ -720,19 +736,13 @@ play: false,
 </style>	
 <script type="text/javascript">
 
-$(document).ready(function(){
-    $("#btn1").click(function(){
-        $("#search-results").remove();
-    });
- $("#btn2").click(function(){
-        $("#card").empty();
-       
-
-    });
-
-});
-
-	
+function aliminarHijos() {
+  var search_results = document.getElementById("search_results");
+  for (var i = 0; i < search_results.children.length; i++) {
+    var card = search_results.children[i]
+    search_results.remove(hijo)
+  }
+}	
 	
 	
 
@@ -798,7 +808,7 @@ function showResults(results) {
         htmlString += card;
     });
 
-    $('#search-results').html(htmlString);
+    $('#search_results').html(htmlString);
 
 }
 
