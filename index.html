@@ -1,4 +1,5 @@
 
+
 <html>
 	
 <!-- Load Facebook SDK for JavaScript -->
@@ -37,7 +38,7 @@
 <!--add 1-->
 <body>
 
-<p>https://embed-ssl.wistia.com/deliveries/155215cba81d971e72b895c6ddf6fdc0.bin?disposition=attachment&filename=12nov.m3u</p>
+
 
 <style type="text/css">
 body {
@@ -491,7 +492,7 @@ window.onclick = function(event) {
 	 
    
 	 <input id="queryInput" autocapitalize="none" autocomplete="off" autocorrect="off" name="search_query" tabindex="0" type="text" spellcheck="false" placeholder="Search" aria-label="Search" aria-haspopup="false" role="combobox" aria-autocomplete="list" dir="ltr" class="ytd-searchbox" style="outline: none;">
-    <a id="click3" href="#">bb</a>
+   
 	 <button id="searchButton" class="search-button" type="text">
       Go
       
@@ -510,7 +511,7 @@ window.onclick = function(event) {
 
 
 <script type="text/javascript"
-	src="https://embed-ssl.wistia.com/deliveries/47ecb65faa3c670042b5e4b4b1c79054.bin?disposition=attachment&filename=jquery-2.2.4.min.js">
+	src="https://embed-ssl.wistia.com/deliveries/47ecb65faa3c670042b5e4b4b1c79054.bin?disposition=attachment&filename=jquery-2.2.4.min.js?">
 </script>
 
 
@@ -615,7 +616,6 @@ play: false,
 <body>
 
 
-<a id="click1" href="#">Add</a><a id="click2" href="#">Reset</a>
 
 
 
@@ -728,21 +728,7 @@ play: false,
 </style>	
 <script type="text/javascript">
 
-$(document).ready(function(){
-  var old="";
-  $("#click1").click(function(){
-    old=$("#search_results").html();
-    $("#search_results").html("asdfad");
-  });
-    
-  $("#click2").click(function(){
-    $("#search_results").html(old);
-  });
-	
-	 $("#click3").click(function(){
-    $("#searchButton").html(old);
-  });
-});	
+
 	
 	
 	
@@ -768,8 +754,8 @@ function getRequest(searchTerm) {
   	var url = 'https://www.googleapis.com/youtube/v3/search';
     var params ={
     		part: 'snippet',
-         key: 'AIzaSyBpPPfNDfj6B-cJaB1Ht7ItoOPmGbnA7kU',
-        q: string
+         key: 'AIzaSyDq4neVjjSiKlKizs2fl9hU-dDM3yB28iU',
+        q: searchTerm
         
        
     }
