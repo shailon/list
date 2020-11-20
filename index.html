@@ -435,11 +435,11 @@ function createCard(_id, title, description, url, addVideo, playlist) {
   <!doctype nicio reproductor>
   <a href="#videos2">videos2</a>
 
-<div id="videos2" class="modalDialog1">
+<div id="videos2" class="modalDialog2">
 <div> <a href="#close" title="Close" class="close">X</a>
 <style type="text/css">
 
-.modalDialog1 {
+.modalDialog2 {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
     top: 0;
@@ -454,11 +454,11 @@ function createCard(_id, title, description, url, addVideo, playlist) {
     transition: opacity 400ms ease-in;
     pointer-events: none;
 }
-.modalDialog1:target {
+.modalDialog2:target {
     opacity:1;
     pointer-events: auto;
 }
-.modalDialog1 > div {
+.modalDialog2 > div {
     width: 90%;
     height: 100%;
     position: relative;
@@ -497,24 +497,7 @@ function createCard(_id, title, description, url, addVideo, playlist) {
 
 
 
- <form id="search-term">
-	
-
-	 
-   
-	 <input id="queryInput" autocapitalize="none" autocomplete="off" autocorrect="off" name="search_query" tabindex="0" type="text" spellcheck="false" placeholder="Search" aria-label="Search" aria-haspopup="false" role="combobox" aria-autocomplete="list" dir="ltr" class="ytd-searchbox" style="outline: none;">
-   
-	 <button id="searchButton" class="search-button" type="text">
-      Go
-      
-    </button>
-   
-
-
-</form>
-
-
-
+ 
 
 
 
@@ -620,212 +603,6 @@ play: false,
    
     
  
-
-</script>
-<script type="text/javascript" src="https://moncryd.net/archivos/contenedor/speed/speed1_100.js"></script> 
-
-<body>
-
-
-
-
-
-<div id="search_results" class="main-container">
-	
-	
-	
-	</div>
-	
-	 
-
-<div>
-<style type="text/css">
-.card{
-    width: 100%;
-    border-radius: 5px;
-    background-color: #FFF;
-    box-shadow: 0px 1px 4px 5px rgba(0, 0, 0, 0.1);
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-}
-.card .info{
-    width: 50%;
-    float: left;
-    height: 50%;
-    position: relative;
-}
-.card .info img{
-    width: 50%;
-    position: absolute;
-    vertical-align: middle;
-    transform: translateY(-50%);
-    top: 50%;
-    opacity: 0.9;
-}
-.content{
-        width: 50%;
-    float: right;
-}
-.content a{
-  text-decoration: none;
-    cursor: pointer;
-    font-size: 12px;
-}
-.content a h2{
-      font-size: 16px;
-    color: #5e5e5e;
-    text-align: center;
-}
-.content p{
-     font-size: 12px;
-    color: #5e5e5e;
-    text-align: center;
-}
-.search-container {
-    clear:both;
-}
-.search-container {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	top: 30px;
-}
-
-.search-container .search {
-	position: relative;
-}
-
-.search-container .search-bar {
-	height: 40px;
-	width: 400px;
-	border-radius: 10em;
-	border: 0;
-	font-size: 22px;
-	padding-left: 10px;
-}
-
-.search-container .search-bar:focus {
-	outline: none;
-}
-
-.search-container .search-button {
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	border-radius: 100%;
-	height: 30px;
-	width: 30px;
-	border: 0;
-  color: #FFF;
-}
-
-.search-container .search-button::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-.search-container .search-button:focus {
-	outline: none;
-}
-
-.search-container .search-button:hover i {
-	color: #EEE;
-}
-.main-container{
-  margin-top: 120px;
-}	
-</style>	
-<script type="text/javascript">
-
-
-	
-	
-	
-
-
-
-//2016 mizTech NTU ESOE mikeZheng 
-var musicCards = [];
-
-$(document).ready(function() {
-    //替按鈕綁上事件
-    $("#searchButton").on("click", function(event) {
-    event.preventDefault();
-        var searchTerm = $("#queryInput").val();
-        //簡單防呆一下
-        getRequest(searchTerm);
-        
-    });
-});
-
-
-function getRequest(searchTerm) {
-  	var url = 'https://www.googleapis.com/youtube/v3/search';
-    var params ={
-    		part: 'snippet',
-         key: 'AIzaSyDq4neVjjSiKlKizs2fl9hU-dDM3yB28iU',
-        q: searchTerm
-        
-       
-    }
-
-  
-        //將結果把所需部分進行擷取
-  
-        // console.log(musicCards);
-        //將VIEW抽出來另外生成
-            
-   
-     $.getJSON(url, params, showResults);
-}
-
-
-
-function showResults(results) {
-	
-    var htmlString = "";
-   var response = results.items;
-   
-     $.each(response, function(i, item) {
-            if (!item['id']['playlistId']) {
-                var musicCard = {};
-                musicCard._id = item['id']['videoId'];
-                musicCard.title = item['snippet']['title'];
-                musicCard.url = "https://www.youtube.com/watch?v=" + musicCard._id;
-                musicCard.description = item['snippet']['description'];
-                musicCards.push(musicCard);
-            }
-        }); 
-   
-   
-    musicCards.forEach(function(musicCard, i) {
-        var card = createCard(musicCard._id, musicCard.title, musicCard.description, musicCard.url);
-
-        htmlString += card;
-    });
-
-    $('#search_results').html(htmlString);
-
-}
-
-
-
-function createCard(_id, title, description, url, addVideo, playlist) {
-    var card =
-        '<div class="card">' +
-        '<div class="info">' +
-        '<img src="http://img.youtube.com/vi/' + _id + '/0.jpg" alt="' + description + '">' +
-        '</div>' +
-        '<div class="content">' +
-        '<a id="playlist" onclick=addVideo("'+url+'")>https://www.youtube.com/watch?v=' + _id +'<h2>' + title + '</h2></a>'+
- 	'<p>' + description + '</p>' +
-        '</div>' +
-        '</div>';
-    return card;
-}
-	
 </script>
         
         
@@ -836,7 +613,7 @@ function createCard(_id, title, description, url, addVideo, playlist) {
         
         
         </div>
-        </body>
+       
         </div>
         
         
