@@ -18,30 +18,45 @@ table, th, td {
       <th>
       
   
+        <!DOCTYPE html>
+<html>
+    <head>
         
-        
-        
-      </th>
-      <th>
-      
+         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+       <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+       <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+       <script src="search.js" type="text/javascript"></script>
  
+       
+    
+       
+    </head>
+    <body>
+        <p>New_world</p>
+     
+      
+      
+      <div id="search">
+      <input type="text"  value="eureka" id="searchtext"><button type="button" id="searchbutton">Find</button>
+      </div>
+        <button type="button">Search Me...</button>
+        
+        <pre id="response">
+        </pre>
+      <pre id="count"></pre>
+        <pre class="vID"></pre>
+        <div id="snipp">
+          <div id="T0">
+          
+          </div>
+          
+        </div>
+        <br/><br/><br/>
         
         
-        </th>
-      <th>
-	
- <html>
-
-<head>
-<title>Mostrar un enlace en una iframe</title>
-</head>
-
-<body>
-
-
-
-
-
+        
+        
+ 
 
 <script type="text/javascript"
 	src="https://embed-ssl.wistia.com/deliveries/47ecb65faa3c670042b5e4b4b1c79054.bin?disposition=attachment&filename=jquery-2.2.4.min.js?">
@@ -134,328 +149,181 @@ play: false,
     
  
 </script>
+               
         
         
-
-
-<p><a href="https://moncryd.com/#videos1" target="ventana_iframe">Enlace 1</a></p>
-<p><a href="https://moncryd.net/#videos2" target="ventana_iframe">Enlace 2</a></p>
-        
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- Button trigger modal -->
+  <script type="text/javascript">
+  
+  
+  var nextPageToken, prevPageToken;
+var firstPage=true;
+$(document).ready(function()
+{
        
-         
-         
-   <!doctype nicio reproductor>
-  <a href="#videos1">videos1</a>
-
-<div id="videos1" class="modalDialog1">
-<div> <a href="#close" title="Close" class="close">X</a>
-<style type="text/css">
-
-.modalDialog1 {
-    position: fixed;
-    font-family: Arial, Helvetica, sans-serif;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-}
-.modalDialog1:target {
-    opacity:1;
-    pointer-events: auto;
-}
-.modalDialog1 > div {
-    width: 90%;
-    height: 100%;
-    position: relative;
-    margin: 3% auto;
-    padding: 5px 20px 13px 20px;
-    border-radius: 10px;
-    background: #fff;
-    background: -moz-linear-gradient(#fff, #999);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-}
-.close {
-    background: #606061;
-    color: #FFFFFF;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    text-decoration: none;
-    font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
-    box-shadow: 1px 1px 3px #000;
-}
-.close:hover {
-    background: #00d9ff;
-}
-
-</style>
-
-
-
-
- <form id="search-term">
-	
-
-	 
-   
-	 <input id="queryInput" autocapitalize="none" autocomplete="off" autocorrect="off" name="search_query" tabindex="0" type="text" spellcheck="false" placeholder="Search" aria-label="Search" aria-haspopup="false" role="combobox" aria-autocomplete="list" dir="ltr" class="ytd-searchbox" style="outline: none;">
-   
-	 <button id="searchButton" class="search-button" type="text">
-      Go
-      
-    </button>
-   
-
-
-</form>
-
-
-
+    $('#searchbutton').click(function()
+    {
+        // Called automatically when JavaScript client library is loaded.
+      //  alert('i am clicked');
+        gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
+ 
+        // Called automatically when YouTube API interface is loaded .
        
+ 
+        // Called automatically with the response of the YouTube API request.
         
-
-<div id="search_results" class="main-container">
-	
-	
-	
-	</div>
-	
-	 
-
-<div>
-<style type="text/css">
-.card{
-    width: 100%;
-    border-radius: 5px;
-    background-color: #FFF;
-    box-shadow: 0px 1px 4px 5px rgba(0, 0, 0, 0.1);
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-}
-.card .info{
-    width: 50%;
-    float: left;
-    height: 50%;
-    position: relative;
-}
-.card .info img{
-    width: 50%;
-    position: absolute;
-    vertical-align: middle;
-    transform: translateY(-50%);
-    top: 50%;
-    opacity: 0.9;
-}
-.content{
-        width: 50%;
-    float: right;
-}
-.content a{
-  text-decoration: none;
-    cursor: pointer;
-    font-size: 12px;
-}
-.content a h2{
-      font-size: 16px;
-    color: #5e5e5e;
-    text-align: center;
-}
-.content p{
-     font-size: 12px;
-    color: #5e5e5e;
-    text-align: center;
-}
-.search-container {
-    clear:both;
-}
-.search-container {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	top: 30px;
-}
-
-.search-container .search {
-	position: relative;
-}
-
-.search-container .search-bar {
-	height: 40px;
-	width: 400px;
-	border-radius: 10em;
-	border: 0;
-	font-size: 22px;
-	padding-left: 10px;
-}
-
-.search-container .search-bar:focus {
-	outline: none;
-}
-
-.search-container .search-button {
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	border-radius: 100%;
-	height: 30px;
-	width: 30px;
-	border: 0;
-  color: #FFF;
-}
-
-.search-container .search-button::-moz-focus-inner {
-	border: 0;
-	padding: 0;
-}
-
-.search-container .search-button:focus {
-	outline: none;
-}
-
-.search-container .search-button:hover i {
-	color: #EEE;
-}
-.main-container{
-  margin-top: 120px;
-}	
-</style>	
-<script type="text/javascript">
-
-
-	
-	
-	
-
-
-
-//2016 mizTech NTU ESOE mikeZheng 
-var musicCards = [];
-
-$(document).ready(function() {
-    //替按鈕綁上事件
-    $("#searchButton").on("click", function(event) {
-    event.preventDefault();
-        var searchTerm = $("#queryInput").val();
-        //簡單防呆一下
-        getRequest(searchTerm);
-        
+ 
+          // $('#search').append("<div id=\"page\"><button type=\"button\" id=\"nextPageButton\">Next Page</button></div>");
+           //  $('#search').append("<div id=\"page\"><button type=\"button\" id=\"nextPageButton\">Next Page"+nextPageToken+"</button></div>");
+ 
+        });
+  $('#search').append("<div id=\"page\"><button type=\"button\" id=\"prevPageButton\">Prev Page "+prevPageToken+"</button></div>");
+    $('#search').append("<div id=\"page\"><button type=\"button\" id=\"nextPageButton\">Next Page "+nextPageToken+"</button></div>");
+    
+     $('#nextPageButton').click(function()
+    {
+       // alert('i am clicked');
+        console.log(nextPageToken);
+        searchYouTubeApi(nextPageToken);
     });
+    
+     $('#prevPageButton').click(function()
+    {
+       // alert('i am clicked');
+        console.log(prevPageToken);
+        searchYouTubeApi(prevPageToken);
+    });
+ 
 });
-
-
-function getRequest(searchTerm) {
-  	var url = 'https://www.googleapis.com/youtube/v3/search';
-    var params ={
-    		part: 'snippet',
-         key: 'AIzaSyDq4neVjjSiKlKizs2fl9hU-dDM3yB28iU',
-         maxresults: 1,
-        q: searchTerm
-        
-       
-    }
-
-  
-        //將結果把所需部分進行擷取
-  
-        // console.log(musicCards);
-        //將VIEW抽出來另外生成
+ 
+ function onYouTubeApiLoad() 
+        {
+            // See http://goo.gl/PdPA1 to get a key for your own applications.
+            gapi.client.setApiKey('AIzaSyDq4neVjjSiKlKizs2fl9hU-dDM3yB28iU');
+            searchYouTubeApi();
+ 
+        }
+ 
+        function searchYouTubeApi(PageToken)
+        {
+             var searchText= $('#searchtext').val();
+             //$('#response').append("<div id=\"searching\"><b>Searching for "+searchText+"</b></div>");
+          $('#response').replaceWith("<div id=\"searching\"><b>Searching for "+searchText+"</b></div>");
+ 
+            // Use the JavaScript client library to create a search.list() API call to Youtube's "Search" resource
+            var request = gapi.client.youtube.search.list(
+            {
+            part: 'snippet',
+            q:searchText,
+            maxResults:2,
+            pageToken:PageToken
+            });
             
-   
-     $.getJSON(url, params, showResults);
-}
-
-
-
-function showResults(results) {
-	
-    var htmlString = "";
-   var response = results.items;
-   
-     $.each(response, function(i, item) {
-            if (!item['id']['playlistId']) {
-                var musicCard = {};
-                musicCard._id = item['id']['videoId'];
-                musicCard.title = item['snippet']['title'];
-                musicCard.url = "https://www.youtube.com/watch?v=" + musicCard._id;
-                musicCard.description = item['snippet']['description'];
-                musicCards.push(musicCard);
+            // Send the request to the API server,
+            // and invoke onSearchRepsonse() with the response.
+            request.execute(onSearchResponse);
+           //  $('#response').append("<div id=\"page\"><button type=\"button\" id=\"nextPageButton\">Next Page return from request execute method is: "+nextPageToken+"</button></div>");
+        }
+ 
+        function onSearchResponse(response) 
+        {
+         
+            var responseString = JSON.stringify(response, '', 2);
+            var resultCount = response.pageInfo.totalResults;
+                nextPageToken=response.nextPageToken;
+                prevPageToken=response.prevPageToken;
+              // document.getElementById('response').innerHTML += responseString;
+                //$('#response').append("<div id=count><b>Found "+resultCount+" Results.</b></div>");
+            $('#count').replaceWith("<div id=count><b>Found "+resultCount+" Results.</b></div>");
+          //$('#searching').append("<div id=length><b>Length "+response.items.length+" </b></div>");
+           
+             
+            for (var i=0; i<response.items.length;i++)
+            for (var i=0; i<response.id;i++)
+            {
+                //store each JSON value in a variable
+                var publishedAt=response.items[i].snippet.publishedAt;
+                var channelId=response.items[i].snippet.channelId;
+                var title=response.items[i].snippet.title;
+                var description=response.items[i].snippet.description;
+                var thumbnails_default=response.items[i].snippet.thumbnails.default.url;
+                var thumbnails_medium=response.items[i].snippet.thumbnails.medium.url;
+                var thumbnails_high=response.items[i].snippet.thumbnails.high.url;
+                var channelTitle=response.items[i].snippet.channelTitle;
+                var liveBroadcastContent=response.items[i].snippet.liveBroadcastContent;
+                var videoID=response.items[i].id.videoId;
+                var channelUrl="https://www.youtube.com/watch?v=" + videoID;
+                 //var firstPage=true;
+ 
+              //  console.log(thumbnails_default);
+                //A HTTP call to this URL with videoID will give all XML info of that video: 
+                //http://gdata.youtube.com/feeds/api/videos?q=videoID
+              //  console.log(videoID);
+                
+                //replace the first search button with a 'more' button
+                //$('button').replaceWith("<button type='button' id=More"+i+">More...</button>");
+              
+               if(firstPage===true)
+               {
+               //print the stored variables in a div element
+                $('#snipp').append("<div id=T><b>Title:</b> "+title+"</div><div id=G <b>Channel Url: </b>"+channelUrl+"</a></div><div id=C><b>Channel ID: </b>"+channelId+"</div><div id=D><b>Description </b>"+description+"</div><div id=P><b>Published on: </b>"+publishedAt+"</div><div id=CT><b>Channel Title: </b>"+channelTitle+"</div><a id=linktoVid href='http://www.youtube.com/watch?v="+videoID+"'><img id=imgTD src=\""+thumbnails_default+"\"/></a><br/><br/><a id=playlist onclick=addVideo('"+channelUrl+"')><video id=vidTD width=\"320\" height=\"240\" controls poster="+thumbnails_default+">Your browser does not support the video tag.</video></a><br/><br/>");
+                
+                }
+                else
+                {
+                  $('#T').replaceWith("<div id=T><b>Title:</b> "+title+"</div>");
+                  $('#C').replaceWith("<div id=C><b>Channel ID: </b>"+channelId+"</div>");
+                  $('#D').replaceWith("<div id=D><b>Description </b>"+description+"</div>");
+                  $('#P').replaceWith("<div id=P><b>Published on: </b>"+publishedAt+"</div>");
+                  $('#CT').replaceWith("<div id=CT><b>Channel Title: </b>"+channelTitle+"</div>");
+                  $('#linktoVid').replaceWith("<a id=linktoVid href='http://www.youtube.com/watch v="+videoID+"'><img id=imgTD src=\""+thumbnails_default+"\"/></a><br/><br/><a id=linktoVid1 href='http://www.youtube.com/watch?v="+videoID+"'><video id=vidTD width=\"320\" height=\"240\" controls poster="+thumbnails_default+"><source src='http://www.youtube.com/watch?v="+videoID+">Your browser does not support the video tag.</video></a><br/><br/>");
+                }
+ 
+            //  $('#snipp').append("<div id=C"+i+">Channle ID: "+channelId+"</div><br/>");
+ 
+            //link rel='alternate' type='text/html' href='http://www.youtube.com/watch?v=76TlUlPZQfQ&amp;feature=youtube_gdata'/>
+              
+ 
             }
-        }); 
-   
-   
-    musicCards.forEach(function(musicCard, i) {
-        var card = createCard(musicCard._id, musicCard.title, musicCard.description, musicCard.url);
-
-        htmlString += card;
-    });
-
-    $('#search_results').html(htmlString);
-
-}
-
-
-
-function createCard(_id, title, description, url, addVideo, playlist) {
-    var card =
-        '<div class="card">' +
-        '<div class="info">' +
-        '<img src="http://img.youtube.com/vi/' + _id + '/0.jpg" alt="' + description + '">' +
-        '</div>' +
-        '<div class="content">' +
-        '<a id="playlist" onclick=addVideo("'+url+'")>https://www.youtube.com/watch?v=' + _id +'<h2>' + title + '</h2></a>'+
- 	'<p>' + description + '</p>' +
-        '</div>' +
-        '</div>';
-    return card;
-}
-	
-</script>
+             // $('#search').append("<div id=\"page\"><button type=\"button\" id=\"nextPageButton\" onclick=\"alert('Hello world!')\">Next Page "+nextPageToken+"</button></div>");
+             // return nextPageToken;
+             firstPage=false;
+        }
+  
+  
+  
+  
+  
+  
+  </script>
         
-        </div>
-
-</div>
-</div>
-  
-
-  
-  
-
-<iframe src="" 
-marginwidth="0" marginheight="0" name="ventana_iframe" scrolling="no" border="0" 
-frameborder="0" width="800" height="600">
-</iframe>
-
-
-
-
-
-
-</body>
-
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
 </html>
-  
+        
+        
+      </th>
+      <th>
+      
+ 
+        
+        
+        </th>
+      <th>
+	
+
   
 	  
 	  
