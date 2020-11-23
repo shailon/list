@@ -1,4 +1,5 @@
- <!doctype html>
+
+<!doctype html>
 <html>
   <head>
   <title>Search</title>
@@ -9,10 +10,197 @@
     <div id="container">
       <h1>Search Results</h1>
       <ul id="results"></ul>
+
+  <script>
+     function keyWordsearch(){
+        gapi.client.setApiKey('AIzaSyAb9MW_I8wmlen7cR9Zfc2b8b03Xa75RFc');
+        gapi.client.load('youtube', 'v3', function() {
+                makeRequest();
+        });
+}
+    function makeRequest() {
+        var q = $('#query').val();
+        var request = gapi.client.youtube.search.list({
+                q: q,
+                part: 'snippet', 
+                maxResults: 6
+        });
+        request.execute(function(response)  {                                                                                    
+                $('#results').empty()
+                var srchItems = response.result.items;                
+                $.each(srchItems, function(index, item) {
+                vidTitle = item.snippet.title;  
+                vidThumburl =  item.snippet.thumbnails.default.url;
+                vidID =   item.id.videoId;
+                vidurl = "https://www.youtube.com/watch?v=" + vidID;
+                vidThumbimg = '<pre><img id="thumb" src="'+vidThumburl+'" alt="No  Image Available." style="width:204px;height:128px"></pre>';                   
+
+                
+                $('#results').append('<a>' + vidTitle + vidThumbimg + vidID +'</a>' + '<a id="playlist" onclick=addVideo("'+vidurl+'")>https://www.youtube.com/watch?v=' + vidID +'<h2>' + vidTitle + '</h2></a>'); 
+                
+ 	
+               
+        })  
+    })  
+}
+  </script> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady">  </script>
+  </div>
+  </div>
+</body>
+
+
+
+<style>
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+</style>
+<body>
+
+<h1></h1>
+
+<p></p>
+
+<div id="mydiv">
+  <div id="mydivheader">Click Aqui para mover</div>
+  
+ 
+   <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+<!--add 3-->
+<body>
+
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+t /* The Modal (background) */
+.modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
     
-    
-    
-    
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal3-content {
+	position: relative;
+    background-color: #fefefe;
+    margin: 10px; /* 15% from the top and centered */
+    padding: 0;
+   
+    border: 1px solid #888;
+	border-radius: 15px;
+    width: 580px; /* Could be more or less, depending on screen size */
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+/* The Close Button */
+.close3 {
+    color: #666;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+.close3:hover, .close3:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Modal Header */
+.modal3-header {
+    padding: 2px 16px;
+    background-color: #f0f0f0;
+	font-size: 22px;
+	text-align: center;
+    color: black;
+}
+/* Modal Body */
+.modal3-body {padding: 2px 16px;}
+.button3 {
+position: relative;
+top: 0px;
+margin: 10px; /* 15% from the top and centered */
+ 
+   
+}
+
+</style>
+
+
+
+	<!-- Trigger/Open The Modal -->
+	<button id="myBtn3" class="button button3">New_world_videos</button>
+	<!-- The Modal -->
+		<div id="myModal3" class="modal3">
+		<!-- Modal content -->
+		<div class="modal3-content">
+		<div class="modal3-header">
+			<span class="close3">X</span>
+			
+		</div>
+		<div class="modal3-body">
+		
+<script>
+// Get the modal
+var modal3 = document.getElementById('myModal3');
+// Get the button that opens the modal
+var btn3 = document.getElementById("myBtn3");
+// Get the <span> element that closes the modal
+var span3 = document.getElementsByClassName("close3")[0];
+// When the user clicks on the button, open the modal
+btn3.onclick = function() {
+    modal3.style.display = "block";
+	modal3.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function() {
+    modal3.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal3) {
+        modal3.style.display = "none";
+    }
+}
+</script>
+
+
+
 
 <script type="text/javascript"
 	src="https://embed-ssl.wistia.com/deliveries/47ecb65faa3c670042b5e4b4b1c79054.bin?disposition=attachment&filename=jquery-2.2.4.min.js?">
@@ -23,36 +211,19 @@
  <script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/9b0ed3b4fd7a2eb3049b51cd26b48b9c0300e7b9.bin?disposition=attachment&filename=jwplayer6.10.js"></script>
         <script type="text/javascript">jwplayer.key = "Q1Ft5yFT0nJBlCFnQAvJ7nC+uwr628IgJBzoCAnnn3tGVqUiRjtloYRetCh+EbI0";</script>
 
-<div id="emergencycouplesatu1"></div>
+<div id="emergencycouplesatu"></div>
 
 <script type="text/javascript">
-    jwplayer("emergencycouplesatu1").setup({
+    jwplayer("emergencycouplesatu").setup({
    playlist: [
-<!--0001-->
-       {sources: [
-{file: "https://www.youtube.com/watch?v=az87rel5RRA"},
+
+       
     
-        { file: "" }],
-image: "",
-        title: "Workout Mix 2020 #58",
-        
-tracks: [{file: "",label: "spanish",kind: "captions","default": true},{file: "",label: "English",kind:                 "captions",}]},	      
-    
-    
-    
-    <!--0002-->
-       {sources: [
-{file: "https://www.youtube.com/watch?v=I5SJ_nD1yy8"},
-    
-        { file: "" }],
-image: "",
-        title: "Workout Mix 2020 #58",
-        
-tracks: [{file: "",label: "spanish",kind: "captions","default": true},{file: "",label: "English",kind:                 "captions",}]},
+   
 	   
 	   
 	   
-	  
+	   
 	   
 	 <!--00077-->
        {sources: [
@@ -104,50 +275,121 @@ play: false,
    
     
  
-</script>
-    
-    
-    
-    
-    
-    
-    
-    <script>
-     function keyWordsearch(){
-        gapi.client.setApiKey('AIzaSyAb9MW_I8wmlen7cR9Zfc2b8b03Xa75RFc');
-        gapi.client.load('youtube', 'v3', function() {
-                makeRequest();
-        });
-}
-    function makeRequest() {
-        var q = $('#query').val();
-        var request = gapi.client.youtube.search.list({
-                q: q,
-                part: 'snippet', 
-                maxResults: 2
-        });
-        request.execute(function(response)  {                                                                                    
-                $('#results').empty()
-                var srchItems = response.result.items;                
-                $.each(srchItems, function(index, item) {
-                vidTitle = item.snippet.title;  
-                vidThumburl =  item.snippet.thumbnails.default.url;
-                vidID =   item.id.videoId;
-                vidurl = "https://www.youtube.com/watch?v=" + vidID;
-                vidThumbimg = '<pre><img id="thumb" src="'+vidThumburl+'" alt="No  Image Available." style="width:204px;height:128px"></pre>';                   
 
-                
-                $('#results').append('<a>' + vidTitle + vidThumbimg + vidID +'</a>' + '<a id="playlist" onclick=addVideo("'+vidurl+'")>https://www.youtube.com/watch?v=' + vidID +'<h2>' + vidTitle + '</h2></a>'); 
-                
- 	
-               
-        })  
-    })  
+</script>
+<script type="text/javascript" src="https://moncryd.net/archivos/contenedor/speed/speed1_100.js"></script> 
+
+<body>
+
+
+
+
+
+
+	
+	 
+
+<div>
+
+
+<li>document.querySelectorAll('video').forEach(v => v.playbackRate=1.1)</li>	
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+		</div>
+		
+		</div>
+    </div>
+    </body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
 }
-  </script> 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady">  </script>
-  </div>
-  </div>
+</script>
+
 </body>
 </html>
