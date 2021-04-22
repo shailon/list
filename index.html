@@ -1,50 +1,13 @@
 
 
 <!doctype html>
-<div id="player"></div>
+<iframe type="text/html" width="720" height="405"
 
-<script src="https://cdn.trovo.live/embed/iframeApi.js"></script>
+src="https://trovo.live/embed/player?streamername=moncryd&autoplay=1" frameborder="0" allowfullscreen>
+</iframe>
+<iframe type="text/html" width="720" height="405"
 
-<script>
-
-        const player = new Trovo.TrovoPlayer('player', {
-
-                   width: "700",
-
-                   height: "500",
-
-                   streamername: "moncryd",
-
-                   enablejsapi: true,
-		
-
-                   origin: "moncryd.net",
-
-                   sdist: "sdist",
-
-                   events: {
-
-                           onReady(playing) {
-
-                                   // do something
-
-                           },                 
-
-                               
-
-                   }
-
-           })
-
-</script>
-<iframe
-
-    src="https://trovo.live/chat/?streamername=moncryd"
-
-    height="700"
-
-    width="700">
-
+src="https://trovo.live/chat/moncryd" frameborder="0" allowfullscreen>
 </iframe>
 
 
