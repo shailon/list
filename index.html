@@ -1,9 +1,54 @@
 
 
 <!doctype html>
-<iframe type="text/html" width="720" height="405"
+<div id="player"></div>
 
-src="https://trovo.live/embed/player?streamername=moncryd&autoplay=1" frameborder="0">
+<script src="https://cdn.trovo.live/embed/iframeApi.js"></script>
+
+<script>
+
+        const player = new Trovo.TrovoPlayer('player', {
+
+                   width: "700",
+
+                   height: "500",
+
+                   streamername: "moncryd",
+
+                   enablejsapi: true,
+
+                   origin: "moncryd.net",
+
+                   sdist: "sdist",
+
+                   events: {
+
+                           onReady() {
+
+                                   // do something
+
+                           },                 
+
+                                onStateChange (state) {                        
+
+                                           // state:onReady/ended/pause/playing
+
+                                }
+
+                   }
+
+           })
+
+</script>
+<iframe
+
+    src="https://trovo.live/chat/?streamername=moncryd"
+
+    height="700"
+
+    width="700">
+
+</iframe>
 
 
 
