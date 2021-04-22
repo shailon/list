@@ -16,7 +16,7 @@
                    streamername: "moncryd",
 
                    enablejsapi: true,
-		autoplay: 1,
+		
 
                    origin: "moncryd.net",
 
@@ -24,13 +24,13 @@
 
                    events: {
 
-                           onReady() {
+                           onReady(playing) {
 
                                    // do something
 
                            },                 
 
-                                onStateChange (state) {                        
+                                onStateChange () {                        
 
                                            // state:onReady/ended/pause/playing
 
