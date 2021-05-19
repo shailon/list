@@ -1,3 +1,103 @@
+<html>
+
+
+<cross-domain-policy>
+  <allow-access-from domain="*" />
+</cross-domain-policy>
+<title></title>
+<cross-domain-policy>
+  <allow-access-from domain="*" />
+</cross-domain-policy>
+<cross-domain-policy>
+  <allow-access-from domain="*" />
+</cross-domain-policy>
+<cross-domain-policy>
+  <allow-access-from domain="*" />
+</cross-domain-policy>
+<body bgcolor=""><table width="0" border="0">
+  <tbody>
+
+
+
+
+
+  <!--1-->
+
+   <tr>
+      <th scope="col"><?xml version="1.0"?>
+
+
+<body bgcolor=""><table width="0" border="0">
+  <tbody>
+    <tr>
+      <th scope="col"><?xml version="1.0"?>
+        
+       <a href="#Ayudame_en_TrovoLive_y_todos_Ganamos">Click para ver mi stream Ayudame en TrovoLive y todos Ganamos</a>
+
+<div id="Ayudame_en_TrovoLive_y_todos_Ganamos" class="modalDialog1">
+<div> <a href="#close" title="Close" class="close">X</a>
+<style type="text/css">
+
+.modalDialog1 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog1:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog1 > div {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    margin: 3% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
+
+</style>
+
+
+
+
+        
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
 
 <!-- Add a placeholder for the Twitch embed -->
     <div id="player"></div>
@@ -24,431 +124,38 @@ var player = new trovo.Player("{PLAYER_DIV_ID}", options);
 src="https://trovo.live/chat/moncryd" frameborder="0" allowfullscreen>
 </iframe>
 
+				</div>
+        </div>
 
 
 
 
-<html>
-  <head>
-  <title>Search</title>
-  </head>
-	
-  <body>
-    <div id="buttons">
-    <label> <input id="query" value='cats' type="text"/><button id="search-button"   onclick="keyWordsearch()">Search</button></label>    
-    <div id="container">
-      <h1>Search Results</h1>
-      <ul id="results"></ul>
-
-  <script>
-     function keyWordsearch(){
-        gapi.client.setApiKey('AIzaSyAb9MW_I8wmlen7cR9Zfc2b8b03Xa75RFc');
-        gapi.client.load('youtube', 'v3', function() {
-                makeRequest();
-        });
-}
-    function makeRequest() {
-        var q = $('#query').val();
-        var request = gapi.client.youtube.search.list({
-                q: q,
-                part: 'snippet', 
-                maxResults: 6
-        });
-        request.execute(function(response)  {                                                                                    
-                $('#results').empty()
-                var srchItems = response.result.items;                
-                $.each(srchItems, function(index, item) {
-                vidTitle = item.snippet.title;  
-                vidThumburl =  item.snippet.thumbnails.default.url;
-                vidID =   item.id.videoId;
-                vidurl = "https://www.youtube.com/watch?v=" + vidID;
-                vidThumbimg = '<pre><img id="thumb" src="'+vidThumburl+'" alt="No  Image Available." style="width:204px;height:128px"></pre>';                   
-
-                
-                $('#results').append('<a>' + vidTitle + vidThumbimg + vidID +'</a>' + '<a id="playlist" onclick=addVideo("'+vidurl+'")>https://www.youtube.com/watch?v=' + vidID +'<h2>' + vidTitle + '</h2></a>'); 
-                
- 	
-               
-        })  
-    })  
-}
-  </script> 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady">  </script>
-  </div>
-  </div>
-</body>
-
-
-
-<style>
-#mydiv {
-  position: -webkit-sticky;
-position: sticky;
-margin: 10px; /* 15% from the top and centered */
-  z-index: 9;
-  background-color: #f1f1f1;
-  text-align: center;
-  border: 1px solid #d3d3d3;
-}
-
-#mydivheader {
-  padding: 10px;
-  cursor: move;
-  z-index: 10;
-  background-color: #2196F3;
-  color: #fff;
-}
-</style>
-<body>
-
-<h1></h1>
-
-<p></p>
-
-<div id="mydiv">
-  <div id="mydivheader">Click Aqui para mover</div>
-  
- 
-   <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-
-<!--add 3-->
-<body>
-
-<style type="text/css">
-body {
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-t /* The Modal (background) */
-.modal3 {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-/* Modal Content/Box */
-.modal3-content {
-	position: relative;
-    background-color: #fefefe;
-    margin: 10px; /* 15% from the top and centered */
-    padding: 0;
-   
-    border: 1px solid #888;
-	border-radius: 15px;
-    width: 580px; /* Could be more or less, depending on screen size */
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-/* Add Animation */
-@-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
-/* The Close Button */
-.close3 {
-    color: #666;
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
-}
-.close3:hover, .close3:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-/* Modal Header */
-.modal3-header {
-    padding: 2px 16px;
-    background-color: #f0f0f0;
-	font-size: 22px;
-	text-align: center;
-    color: black;
-}
-/* Modal Body */
-.modal3-body {padding: 2px 16px;}
-.button3 {
-position: relative;
-top: 0px;
-margin: 10px; /* 15% from the top and centered */
- 
-   
-}
-
-</style>
-
-
-
-	<!-- Trigger/Open The Modal -->
-	<button id="myBtn3" class="button button3">New_world_videos</button>
-	<!-- The Modal -->
-		<div id="myModal3" class="modal3">
-		<!-- Modal content -->
-		<div class="modal3-content">
-		<div class="modal3-header">
-			<span class="close3">X</span>
-			
-		</div>
-		<div class="modal3-body">
-		
-<script>
-// Get the modal
-var modal3 = document.getElementById('myModal3');
-// Get the button that opens the modal
-var btn3 = document.getElementById("myBtn3");
-// Get the <span> element that closes the modal
-var span3 = document.getElementsByClassName("close3")[0];
-// When the user clicks on the button, open the modal
-btn3.onclick = function() {
-    modal3.style.display = "block";
-	modal3.style.display = "block";
-}
-// When the user clicks on <span> (x), close the modal
-span3.onclick = function() {
-    modal3.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal3) {
-        modal3.style.display = "none";
-    }
-}
-</script>
-
-
-
-
-<script type="text/javascript"
-	src="https://embed-ssl.wistia.com/deliveries/47ecb65faa3c670042b5e4b4b1c79054.bin?disposition=attachment&filename=jquery-2.2.4.min.js?">
-</script>
-
-
-
- <script type="text/javascript" src="https://embed-ssl.wistia.com/deliveries/9b0ed3b4fd7a2eb3049b51cd26b48b9c0300e7b9.bin?disposition=attachment&filename=jwplayer6.10.js"></script>
-        <script type="text/javascript">jwplayer.key = "Q1Ft5yFT0nJBlCFnQAvJ7nC+uwr628IgJBzoCAnnn3tGVqUiRjtloYRetCh+EbI0";</script>
-
-<div id="emergencycouplesatu"></div>
-
-<script type="text/javascript">
-    jwplayer("emergencycouplesatu").setup({
-   playlist: [
-
-       
-  
-	   
-	   
-	   
-	   
-	 <!--00077-->
-       {sources: [
-{file: "https://www.youtube.com/watch?v=vQgsYbczLoQ"},
-    
-        { file: "" }],
-image: "",
-        title: "Workout Mix 2020 #58",
+       </th>
+      <th scope="col"><?xml version="1.0"?>
         
-tracks: [{file: "",label: "spanish",kind: "captions","default": true},{file: "",label: "English",kind:                 "captions",}]}   
-	   
-	   
-	   
- ],
- 
-autostart: false,
-controls: true,
-play: false,
-  mute: false,
-  stretching : "exactfit",
-    events:{
-        onBufferChange: function(callback) {
-              //  console.log(callback.buffer);
-               // console.log(jwplayer("emergencycouplesatu").getBuffer());
-            }
-        },
-    width: 500,
-	height: 250,
-    listbar: {
-      position: "right",
-      size: 200,
-    }
-  });
-    
-   
-    function addVideo(videoUrl, videoThumb, videoTitle) {
-        var playlist = jwplayer().getPlaylist();
-        var newItem = {
-            file: videoUrl,
-            image: videoThumb,
-            title: videoTitle
-        };
-        playlist.push(newItem);
-        jwplayer().load(playlist);
-    }
- 
-    
-    
-   
-    
- 
 
-</script>
-<script type="text/javascript" src="https://moncryd.net/archivos/contenedor/speed/speed1_100.js"></script> 
-
-<body>
+</th>
+    </tr>
+    <tr>
+      <th scope="row"><?xml version="1.0"?>
+        <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
 
 
 
 
+        </th>
+      <td><?xml version="1.0"?>
+        
 
 
-	
-	 
-
-<div>
-
-
-<li>document.querySelectorAll('video').forEach(v => v.playbackRate=1.1)</li>	
-</div>
+</td>
+    </tr>
+  </tbody>
+</table>
 </body>
-
-
-
-
-
-
-
-
-
-
-		</div>
-		
-		</div>
-    </div>
-    </body>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</div>
-
-<script>
-//Make the DIV element draggagle:
-dragElement(document.getElementById("mydiv"));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    /* if present, the header is where you move the DIV from:*/
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    /* otherwise, move the DIV from anywhere inside the DIV:*/
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-</script>
-
+</th>
+</tr>
+</tbody>
+</table>
 </body>
-	
-	
-
-
-  
-
-	
-	
-	
-<!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
-
-    <!-- Load the Twitch embed script -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: 680,
-        height: 460,
-	      muted: true,
-        channel: "moncryd",
-        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
-        parent: ["moncryd.com"]
-      });
-var player = new Twitch.Player("{PLAYER_DIV_ID}", options);
-    player.setMuted(0.5);
-    </script>	
-	
-	
 </html>
