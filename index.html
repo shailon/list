@@ -77,12 +77,30 @@
         
         
         <!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
-<iframe type="text/html" width="680" height="460" src="https://trovo.live/embed/player?streamername=moncryd&autoplay=1" frameborder="0">
-</iframe>
-<body>
-<iframe type="text/html" width="680" height="460"
 
-src="https://trovo.live/chat/moncryd" frameborder="0">
+<!-- Add a placeholder for the Twitch embed -->
+    <div id="player"></div>
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://cdn.trovo.live/embed/iframeApi.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+    <script type="text/javascript">
+      new Trovo.TrovoPlayer("player", {
+        width: 680,
+        height: 460,
+	      muted: true,
+        streamername: "moncryd",
+        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+        parent: ["moncryd.net"]
+      });
+var player = new trovo.Player("{PLAYER_DIV_ID}", options);
+    player.setMuted(0.5);
+    </script>	
+
+<iframe type="text/html" width="720" height="405"
+
+src="https://trovo.live/chat/moncryd" frameborder="0" allowfullscreen>
 </iframe>
 </body>
 
